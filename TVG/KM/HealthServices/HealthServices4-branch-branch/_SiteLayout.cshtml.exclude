@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHPC - @Page.Title</title>
+
+    <link href="~/css/reset.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/Style.css" rel="stylesheet" type="text/css" media="screen" />
+
+    <link href="~/css/lightbox.css" rel="stylesheet" />
+    <link href="http://www.googleapis.com/css?jamily=Open+Sans|Baumans" rel="stylesheet" type="text/css" />
+
+    <script src="~/js/modernizr-2.6.2.js"></script>
+    <script src="~/js/respond.js"></script>
+
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">window.jQuery || document.write('<script type="text\/javascript" src="js\/1.7.2.jquery.min"><\/script>')</script>
+
+    <script src="~/js/lightbox.js"></script>
+    <script src="~/js/prefixfree.js"></script>
+    <script src="~/js/jquery.slides.js"></script>
+    <script src="~/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" id="page_Effect_JS">
+        $(document).ready(function () {
+            $('.buttonset > a').click(function () {
+                var isClicked = $(this).hasClass('active');
+                var clickedId = isClicked ? 'Content' : $(this).attr('id');
+                $('.buttonset > a').each(function () {
+                    $(this).removeClass('active');
+                });
+                if (!isClicked) {
+                    $(this).addClass('active');
+                }
+                $('#display > div').each(function () {
+                    if ($(this).css('display') == 'block') {
+                        $(this).fadeOut(200);
+                        if ($(this).hasClass('ArticleLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        } else if ($(this).hasClass('ResourceLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        } else if ($(this).hasClass('NewsletterLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        } else if ($(this).hasClass('CommunityResourceGuideLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        } else if ($(this).hasClass('EmergencyNumberLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        } else if ($(this).hasClass('SHARPLinkAnimate')) {
+                            $(this).animate({
+                                top: '-100%'
+                            }, 200);
+                        }
+                    }
+                });
+                var newMonitor = $('#display' + clickedId);
+                newMonitor.delay(200).fadeIn(200);
+                if (newMonitor.hasClass('ArticleLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                } else if (newMonitor.hasClass('ResourceLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                } else if (newMonitor.hasClass('NewsletterLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                } else if (newMonitor.hasClass('CommunityResourceGuideLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                } else if (newMonitor.hasClass('EmergencyNumberLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                } else if (newMonitor.hasClass('SHARPLinkAnimate')) {
+                    newMonitor.animate({
+                        top: '0%'
+                    }, 200);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <a href="~/"><img src="~/Images/CHPC Logo.png" class="site-title" width="150" /></a>
+            </div>
+            
+            <div class="float-right">
+                <div class="search">
+                    <form action="#">
+                        <input type="text" name="sitesearch" value="Enter a word..." onfocus="if (this.value == 'Enter a word...') { return this.value = '' }" onblur="if (this.value == '') { return this.value = 'Enter a word...' }" />
+                        <input type="submit" name="start_search" class="button" value="Search" />
+                    </form>
+                </div>
+
+                <div class="toggleMobile">
+                    <span class="menu1"></span>
+                    <span class="menu2"></span>
+                    <span class="menu3"></span>
+                </div>
+                <div id="mobileMenu">
+                    <ul>
+                        <li><a href="javascript:void(0)">Home</a></li>
+                        <li><a href="javascript:void(0)">Porfolio</a></li>
+                        <li><a href="javascript:void(0)">About</a></li>
+                    </ul>
+                </div>
+
+                <nav id="navigation_links">
+                    <ul id="menu">
+                        <li id="spiritualTab"><a href="~/MainPages/Spiritual.cshtml">Spiritual</a></li>
+                        <li id="physicalTab"><a href="~/MainPages/Physical.cshtml">Physical</a></li>
+                        <li id="emotionalTab"><a href="~/MainPages/Emotional.cshtml">Emotional</a></li>
+                        <li id="familyTab"><a href="~/MainPages/Family.cshtml">Family</a></li>
+                        <li id="socialTab"><a href="~/MainPages/Social.cshtml">Social</a></li>
+                        <li id="resoursesTab"><a href="~/MainPages/Resources.cshtml">Resources</a></li>
+                        <li id="calendarTab"><a href="~/MainPages/Calendar.cshtml">Calendar</a></li>
+                        <li id="needHelpNowTab"><a href="~/MainPages/NeedHelpNow.cshtml">Need Help Now</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="spacer">
+        <h2 class="hidden">@Page.Title</h2>
+        <nav id="tab_navigation">
+            <div id="ArticleLink" class="buttonset">
+                <a id="ArticleLink0" href="#">Articles</a>
+            </div>
+            <div id="ResourceLink" class="buttonset">
+                <a id="ResourceLink0" href="#">Resources</a>
+            </div>
+            <div id="NewsletterLink" class="buttonset">
+                <a id="NewsletterLink0" href="#">Newsletter</a>
+            </div>
+            <div id="CommunityResourceGuideLink" class="buttonset">
+                <a id="CommunityResourceGuideLink0" href="#">Community Resource Guide</a>
+            </div>
+            <div id="EmergencyNumberLink" class="buttonset">
+                <a id="EmergencyNumberLink0" href="#">Emergency Numbers</a>
+            </div>
+            <div id="SHARPLink" class="buttonset">
+                <a id="SHARPLink0" href="#">SHARP</a>
+            </div>
+        </nav>
+    </section>
+
+    <section id="body">
+        @RenderSection("featured", required: false)
+        
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </section>
+
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - Health Services</p>
+            </div>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

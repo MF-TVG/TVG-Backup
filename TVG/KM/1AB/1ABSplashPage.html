@@ -1,0 +1,167 @@
+﻿<!--
+******************************************
+**   1st Aviation Brigade Splash Page   **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>1st Aviation Brigade</title>
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('USAACE.png') no-repeat center fixed;
+            background-size: cover;
+            font-family: Verdana;
+        }
+
+        /*Page wide image settings*/
+        img {
+            border: none;
+            width: 150px;
+        }
+
+        /*Page header settings*/
+        h1 {
+            position: absolute;
+            font-size: 50px;
+            text-align: center;
+            text-decoration: none;
+            opacity: 0.7;
+            left: 10%;
+            width: 80%;
+            top: 0;
+            border-radius: 10px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImczNTciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNFM0UzRTMiIG9mZnNldD0iLjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRTNFM0UzIiBvZmZzZXQ9IjAuOCIvPjxzdG9wIHN0b3AtY29sb3I9IiMwMDAwMDAiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2czNTcpIiAvPgo8L3N2Zz4=);
+        }
+
+        /*Regiment link and logo location settings*/
+        .logo {
+            position: absolute;
+            left: 10%;
+            top: 35%;
+            width: 150px;
+        }
+
+            /*Regiment link position settings*/
+            .logo a, .battalions a, .links a {
+                display: block;
+                border: none;
+                padding: 0;
+                text-align: center;
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 20px;
+                text-decoration: none;
+                opacity: 0.7;
+            }
+
+                .logo a:hover, .battalions a:hover, .links a:hover {
+                    opacity: 1;
+                    -ms-transform: scale(1.1);
+                }
+
+        /*Regiment link and logo location settings*/
+        .battalions {
+            position: absolute;
+            left: 80%;
+            width: 150px;
+            top: 18%;
+        }
+
+            /*Regiment link position settings*/
+            .battalions a {
+                margin-top: 20px;
+            }
+
+        /*Navigation link position placement*/
+        .links {
+            position: absolute;
+            bottom: 2%;
+            left: 10%;
+            width: 70%;
+            padding: 0;
+        }
+
+            /*Navigation link settings and layout*/
+            .links a {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMzQiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTAwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgo8c3RvcCBzdG9wLWNvbG9yPSIjMDAwMDAwIiBvZmZzZXQ9IjAiLz48c3RvcCBzdG9wLWNvbG9yPSIjMTExMTExIiBvZmZzZXQ9Ii4xIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzIyMjIyMiIgb2Zmc2V0PSIuMiIvPjxzdG9wIHN0b3AtY29sb3I9IiMzMzMzMzMiIG9mZnNldD0iLjMiLz48c3RvcCBzdG9wLWNvbG9yPSIjNDQ0NDQ0IiBvZmZzZXQ9Ii40Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzU1NTU1NSIgb2Zmc2V0PSIuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiM2NjY2NjYiIG9mZnNldD0iLjYiLz48c3RvcCBzdG9wLWNvbG9yPSIjNzc3Nzc3IiBvZmZzZXQ9Ii43Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzg4ODg4OCIgb2Zmc2V0PSIuOCIvPjxzdG9wIHN0b3AtY29sb3I9IiM5OTk5OTkiIG9mZnNldD0iLjkiLz48c3RvcCBzdG9wLWNvbG9yPSIjQUFBQUFBIiBvZmZzZXQ9IjEiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNnMjM0KSIgLz4KPC9zdmc+);
+                border-radius: 10px;
+                font-size: 15px;
+                padding: 10px;
+                margin: 10px;
+                height: 20px;
+                display: inline-block;
+                color: #f5ff0d;
+            }
+
+                /*Navigation link hover effects*/
+                .links a:hover {
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyMTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNBNkE2QTYiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMyRjMwMjYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2cyMTEpIiAvPgo8L3N2Zz4=);
+                }
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>1st Aviation Brigade</h1>
+
+    <!--Displays link and logo to 1AB Homepage-->
+    <div class="logo">
+        <a href="../Pages/1ABHome.aspx">
+            <img src="1AB.png" alt="1st Aviation Brigade" title="Visit 1st Aviation Brigade Portal" />
+            <div>1AB</div>
+        </a>
+    </div>
+
+    <!--Displays links and logos to 1-13th, 1-145th, and 2-13th Regiment Homepages-->
+    <div class="battalions">
+
+        <a href="../1-13th/113thAVNReg/1-13th%20Aviation%20Regiment%20Splash%20Page.html">
+            <img src="1-13th.png" title="Visit 1-13th Aviation Regiment Portal" />
+            <div>1-13th</div>
+        </a>
+        <a href="../2-13th/Pages/default.aspx">
+            <img src="2-13th.png" title="Visit 2-13th Aviation Regiment Portal" />
+            <div>2-13th</div>
+        </a>
+        <a href="../1-145th/Pages/default.aspx">
+            <img src="1-145th.png" title="Visit 1-145th Aviation Regiment Portal" />
+            <div>1-145th</div>
+        </a>
+    </div>
+
+    <!--Navigation links to 1AB Homepage-->
+    <div class="links">
+        <a href="../Shared%20Documents/Forms/AllItems.aspx">Shared Documents</a>
+        <a href="../1AB%20USR%20%20Unofficial/Forms/AllItems.aspx">USR Slides</a>
+        <a href="../BRT%20Slides/Forms/AllItems.aspx">BRT Slides</a>
+        <a href="../Command%20and%20Staff%20Slides/Forms/AllItems.aspx">Command and Staff Slides</a>
+        <a href="../Policy%20Letters/Forms/AllItems.aspx">Policy Letters</a>
+        <a href="../Smart%20Cards/Forms/AllItems.aspx">Smart Cards</a>
+        <a href="../VIP%20Brief/Forms/AllItems.aspx">VIP Brief</a>
+        <a href="../XOS3%20Collaborative/Forms/AllItems.aspx">XO/S3 Collaborative</a>
+        <a href="../Alert%20Rosters/Forms/AllItems.aspx">Alert Rosters</a>
+        <a href="../CCIR%20%20OPREP%20Templates/Forms/AllItems.aspx">CCIR/OPREP Templates</a>
+        <a href="../Awards%20Templates/Forms/AllItems.aspx">Awards Templates</a>
+        <!--    <a href="#">TDY Projections</a>    <!-- This link requires an address. Future revision will be required. -->
+        <!--    <a href="#">Memorandum Template</a>    <!-- This link requirea an address. Future revision will be required. -->
+    </div>
+</body>
+</html>

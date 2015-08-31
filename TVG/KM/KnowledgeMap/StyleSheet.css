@@ -1,0 +1,326 @@
+﻿html {
+    min-width: 1540px;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+
+    /*We will use ::before and ::after to draw the connectors*/
+
+    .tree li::before, .tree li::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ccc;
+        width: 50%;
+        height: 20px;
+    }
+
+    .tree li::after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ccc;
+    }
+
+    /*We need to remove left-right connectors from elements without any siblings*/
+    .tree li:only-child::after, .tree li:only-child::before {
+        display: none;
+    }
+
+    /*Remove space from the top of single children*/
+    .tree li:only-child {
+        padding-top: 0;
+    }
+
+    /*Remove left connector from first child and right connector from last child*/
+    .tree li:first-child::before, .tree li:last-child::after {
+        border: 0 none;
+    }
+    /*Adding back the vertical connector to the last nodes*/
+    .tree li:last-child::before {
+        border-right: 1px solid #ccc;
+        border-radius: 0 5px 0 0;
+    }
+
+    .tree li:first-child::after {
+        border-radius: 5px 0 0 0;
+    }
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.tree li a {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+    /*Time for some hover effects*/
+    /*We will apply the hover effect the the lineage of the element also*/
+    .tree li a:hover, .tree li a:hover + ul li a {
+        background: #c8e4f8;
+        color: #000;
+        border: 1px solid #94a0b4;
+    }
+        /*Connector styles on hover*/
+        .tree li a:hover + ul li::after,
+        .tree li a:hover + ul li::before,
+        .tree li a:hover + ul::before,
+        .tree li a:hover + ul ul::before {
+            border-color: #94a0b4;
+        }
+
+#child0 {
+    width: 345px;
+    margin-left: -90px;
+}
+
+    #child0 ul::before, #child0 ul::after {
+        margin-top: -14px;
+        margin-left: -153px;
+        width: 80px;
+        height: 226px;
+        border-radius: 5px 0 0 0;
+    }
+
+    #child0 ul li::before, #child0 ul li::after {
+        top: 32px;
+        left: -20px;
+        border-width: 1px 0 0 0;
+        width: 25px;
+        border-radius: 0;
+    }
+
+    #child0 ul a {
+        width: 180px;
+    }
+
+#child1 {
+    width: 427px;
+    margin-left: -50px;
+    height: 900px;
+}
+
+    #child1 ul::before, #child1 ul::after {
+        padding-top: 240px;
+        margin-left: -100px;
+    }
+
+    #child1 ul ul::before, #child1 ul ul::after {
+        margin-top: -14px;
+        margin-left: -155px;
+        border-radius: 5px 0 0 0;
+    }
+
+#child1-0 ul::before, #child1-0 ul::after {
+    width: 96px;
+    height: 355px;
+}
+
+#child1-1 ul::before, #child1-1 ul::after {
+    width: 86px;
+    height: 137px;
+}
+
+#child1-2 ul::before, #child1-2 ul::after {
+    width: 97px;
+    height: 227px;
+}
+
+#child1 ul ul li::before, #child1 ul ul li::after {
+    top: 32px;
+    left: -6px;
+    border-width: 1px 0 0 0;
+    width: 12px;
+    border-radius: 0;
+}
+
+#child1-0 {
+    top: 240px;
+    left: -360px;
+}
+
+#child1-1 {
+    top: -411px;
+    left: -120px;
+}
+
+    #child1-0 ul, #child1-1 ul, #child1-2 ul {
+        padding-right: 140px;
+    }
+
+
+#child1-2 {
+    top: -845px;
+    right: -130px;
+}
+
+
+    #child1-0 ul a, #child1-1 ul a, #child1-2 ul a {
+        width: 150px;
+    }
+
+#child2 {
+    width: 452px;
+    margin-left: -40px;
+}
+
+    #child2 ul::before, #child2 ul::after {
+        padding-top: 30px;
+    }
+
+#child2-0 {
+    top: 10px;
+    left: -300px;
+}
+
+#child2-1 {
+    top: -5px;
+    left: -110px;
+}
+
+    #child2-1::before, #child2-1::after {
+        top: -30px;
+        padding-top: 30px;
+    }
+
+    #child2-1 ul {
+        width: 380px;
+        margin-left: -140px;
+    }
+
+        #child2-1 ul a {
+            width: 150px;
+        }
+
+        #child2-1 ul::before, #child2-1 ul::after {
+            padding-top: 0;
+        }
+
+#child2-2 {
+    top: 10px;
+    left: -20px;
+}
+
+    #child2-2::before, #child2-2::after {
+        padding-top: 167px;
+        top: -167px;
+        width: 100px;
+    }
+
+    #child2-2 ul a {
+        width: 180px;
+    }
+
+
+    #child2-2 ul::before, #child2-2 ul::after, #child2-3 ul::before, #child2-3::after {
+        margin-top: -14px;
+        margin-left: -170px;
+        border-radius: 5px 0 0 0;
+    }
+
+    #child2-2 ul::before, #child2-2 ul::after {
+        width: 80px;
+        height: 252px;
+    }
+
+#child2-3 ul::before, #child2-3 ul::after {
+    width: 93px;
+    height: 240px;
+}
+
+#child2-2 ul li::before, #child2-2 ul li::after, #child2-3 ul li::before, #child2-3 ul li::after {
+    top: 32px;
+    left: -8px;
+    border-width: 1px 0 0 0;
+    width: 14px;
+    border-radius: 0;
+}
+
+#child2-3 {
+    top: 20px;
+    right: -130px;
+}
+
+    #child2-3::before, #child2-3::after {
+        top: -503px;
+        padding-top: 503px;
+    }
+
+    #child2-3 ul a {
+        width: 150px;
+    }
+
+#child3 {
+    width: 386px;
+}
+
+
+
+    #child3 ul::before, #child3 ul::after {
+        margin-top: -14px;
+        margin-left: -170px;
+        border-radius: 5px 0 0 0;
+        width: 102px;
+        height: 735px;
+    }
+
+
+    #child3 ul li::before, #child3 ul li::after {
+        top: 32px;
+        left: -16px;
+        border-width: 1px 0 0 0;
+        width: 22px;
+        border-radius: 0;
+    }
+
+    #child3 ul a {
+        width: 240px;
+    }
+
+#parent {
+    height: 900px;
+}
+
+#child0 a:first-child,
+#child1 a:first-child,
+#child2 a:first-child,
+#child3 a:first-child {
+    background-color: lightsteelblue;
+}
+
+#child0 a:last-child,
+#child1 a:last-child,
+#child2 a:last-child,
+#child3 a:last-child {
+    background-color: aliceblue;
+}

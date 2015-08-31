@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        html {
+            min-width: 1540px;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+        }
+
+            /*We will use ::before and ::after to draw the connectors*/
+
+            .tree li::before, .tree li::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 50%;
+                border-top: 1px solid #ccc;
+                width: 50%;
+                height: 20px;
+            }
+
+            .tree li::after {
+                right: auto;
+                left: 50%;
+                border-left: 1px solid #ccc;
+            }
+
+            /*We need to remove left-right connectors from elements without any siblings*/
+            .tree li:only-child::after, .tree li:only-child::before {
+                display: none;
+            }
+
+            /*Remove space from the top of single children*/
+            .tree li:only-child {
+                padding-top: 0;
+            }
+
+            /*Remove left connector from first child and right connector from last child*/
+            .tree li:first-child::before, .tree li:last-child::after {
+                border: 0 none;
+            }
+            /*Adding back the vertical connector to the last nodes*/
+            .tree li:last-child::before {
+                border-right: 1px solid #ccc;
+                border-radius: 0 5px 0 0;
+            }
+
+            .tree li:first-child::after {
+                border-radius: 5px 0 0 0;
+            }
+
+        /*Time to add downward connectors from parents*/
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 1px solid #ccc;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li a {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #666;
+            font-family: arial, verdana, tahoma;
+            font-size: 11px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+            /*Time for some hover effects*/
+            /*We will apply the hover effect the the lineage of the element also*/
+            .tree li a:hover, .tree li a:hover + ul li a {
+                background: #c8e4f8;
+                color: #000;
+                border: 1px solid #94a0b4;
+            }
+                /*Connector styles on hover*/
+                .tree li a:hover + ul li::after,
+                .tree li a:hover + ul li::before,
+                .tree li a:hover + ul::before,
+                .tree li a:hover + ul ul::before {
+                    border-color: #94a0b4;
+                }
+    </style>
+    <style>
+        #child3 {
+            margin-left: -220px;
+            margin-right: 0;
+        }
+
+        #child3, #child4, #child5 {
+            padding-top: 50px;
+        }
+
+
+            #child3::before, #child3::after, #child4::before, #child4::after, #child5::before, #child5::after {
+                height: 50px;
+            }
+
+        #child4 {
+            width: 155px;
+            margin-left: -20px;
+            margin-right: 0;
+        }
+
+            #child4 ul::before, #child4 ul::after {
+                height: 120px;
+            }
+
+            #child4 .third {
+                width: 1540px;
+                left: -710px;
+            }
+
+        #child4-0 {
+            top: 100px;
+            left: -100px;
+        }
+
+            #child4-0 ul {
+                width: 246px;
+                left: 100px;
+            }
+
+                #child4-0 ul::before, #child4-0 ul::after {
+                    margin-left: -120px;
+                    padding-top: 69px;
+                }
+
+        #child4-0-0::before, #child4-0-0::after,
+        #child4-0-1::before, #child4-0-1::after,
+        #child4-0-2::before, #child4-0-2::after,
+        #child4-0-3::before, #child4-0-3::after {
+            top: 35px;
+            left: -17px;
+            width: 22px;
+            border-width: 1px 0 0 0;
+            border-radius: 0;
+        }
+
+        #child4-1 {
+            top: 100px;
+            left: -100px;
+        }
+
+            #child4-1 ul {
+                width: 246px;
+                left: 100px;
+            }
+
+                #child4-1 ul::before, #child4-1 ul::after {
+                    margin-left: -120px;
+                    padding-top: 114px;
+                }
+
+        #child4-1-0::before, #child4-1-0::after,
+        #child4-1-1::before, #child4-1-1::after,
+        #child4-1-2::before, #child4-1-2::after,
+        #child4-1-3::before, #child4-1-3::after,
+        #child4-1-4::before, #child4-1-4::after {
+            top: 35px;
+            left: -17px;
+            width: 22px;
+            border-width: 1px 0 0 0;
+            border-radius: 0;
+        }
+
+        #child4-2 {
+            top: 100px;
+            left: -100px;
+        }
+
+            #child4-2 ul {
+                width: 246px;
+                left: 100px;
+            }
+
+                #child4-2 ul::before, #child4-2 ul::after {
+                    margin-left: -120px;
+                    padding-top: 199px;
+                }
+
+        #child4-2-0::before, #child4-2-0::after,
+        #child4-2-1::before, #child4-2-1::after,
+        #child4-2-2::before, #child4-2-2::after,
+        #child4-2-3::before, #child4-2-3::after {
+            top: 35px;
+            left: -17px;
+            width: 23px;
+            border-width: 1px 0 0 0;
+            border-radius: 0;
+        }
+
+        #child4-2-0, #child4-2-1 {
+            left: -85px;
+        }
+
+            #child4-2-0::before, #child4-2-0::after, #child4-2-1::before, #child4-2-1::after {
+                left: 69px;
+            }
+
+            #child4-2-0 ul, #child4-2-1 ul {
+                left: 30px;
+            }
+
+                #child4-2-0 ul::before, #child4-2-0 ul::after, #child4-2-1 ul::before, #child4-2-1 ul::after {
+                    padding: 0;
+                    margin-left: -11px;
+                    width: 1px;
+                    max-height: 20px;
+                }
+
+        #child4-3 {
+            top: 100px;
+            left: -50px;
+        }
+
+            #child4-3::before, #child4-3::after {
+                width: 200px;
+            }
+
+            #child4-3 ul {
+                width: 236px;
+                left: 100px;
+            }
+
+                #child4-3 ul::before, #child4-3 ul::after {
+                    margin-left: -120px;
+                    padding-top: 466px;
+                }
+
+        #child4-3-0::before, #child4-3-0::after,
+        #child4-3-1::before, #child4-3-1::after,
+        #child4-3-2::before, #child4-3-2::after,
+        #child4-3-3::before, #child4-3-3::after {
+            top: 35px;
+            left: -22px;
+            width: 23px;
+            border-width: 1px 0 0 0;
+            border-radius: 0;
+        }
+
+        #child4-3-0 {
+            left: -115px;
+        }
+
+        #child4-3-1 {
+            left: -98px;
+        }
+
+        #child4-3-2 {
+            left: -5px;
+        }
+
+        #child4-3-3 {
+            left: -84px;
+        }
+
+        #child4-3-0::before, #child4-3-0::after {
+            margin-left: 115px;
+        }
+
+        #child4-3-1::before, #child4-3-1::after {
+            margin-left: 98px;
+        }
+
+        #child4-3-2::before, #child4-3-2::after {
+            margin-left: 5px;
+        }
+
+        #child4-3-3::before, #child4-3-3::after {
+            margin-left: 84px;
+        }
+
+        #child4-3-0 ul::before, #child4-3-0 ul::after {
+            padding-top: 159px;
+            width: 1px;
+        }
+
+        #child4-3-1 ul::before, #child4-3-1 ul::after {
+            padding-top: 0;
+            width: 1px;
+            max-height: 100px;
+        }
+
+        #child4-3-3 ul::before, #child4-3-3 ul::after {
+            padding-top: 25px;
+            width: 1px;
+        }
+
+        #child4-3-0 ul li, #child4-3-1 ul li, #child4-3-3 ul li {
+            left: -5px;
+        }
+
+        #child4-3-0-0::before, #child4-3-0-0::after,
+        #child4-3-0-1::before, #child4-3-0-1::after,
+        #child4-3-0-2::before, #child4-3-0-2::after,
+        #child4-3-0-3::before, #child4-3-0-3::after,
+        #child4-3-0-4::before, #child4-3-0-4::after,
+        #child4-3-0-5::before, #child4-3-0-5::after,
+        #child4-3-1-0::before, #child4-3-1-0::after,
+        #child4-3-1-1::before, #child4-3-1-1::after,
+        #child4-3-3-0::before, #child4-3-3-0::after,
+        #child4-3-3-1::before, #child4-3-3-1::after,
+        #child4-3-3-2::before, #child4-3-3-2::after {
+            top: 35px;
+            left: -17px;
+            width: 23px;
+            border-width: 1px 0 0 0;
+            border-radius: 0;
+        }
+
+        #child4-3-0-1 a, #child4-3-0-2 a {
+            width: 150px;
+        }
+
+        #child4-4 {
+            top: 100px;
+            right: -100px;
+        }
+
+            #child4-4::before, #child4-4::after {
+                width: 200px;
+            }
+
+
+        #child5 {
+            margin-left: -50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <ul class="first">
+            <!--Top Level-->
+            <li id="parent">
+                <a href="#">DCS Portal</a>
+                <ul class="second">
+
+                    <!--Left First Level-->
+                    <li id="child0"><a href="#">DCS Status</a></li>
+
+                    <!--Right First Level-->
+                    <li id="child1"><a href="#">DCS Announcements</a></li>
+
+                    <!--First Second Level-->
+                    <li id="child2"><a href="#">Access DCS Application</a></li>
+
+                    <!--Second Second Level-->
+                    <li id="child3">
+                        <a href="#">FAQ</a>
+                        <ul>
+                            <!--Second Second Level Sub Levels-->
+                            <li id="child3-0"><a href="#">Web Meeting FAQs</a></li>
+                            <li id="child3-1"><a href="#">Chat Client Faqs</a></li>
+                            <li id="child3-2"><a href="#">General Items FAQs</a></li>
+                            <li id="child3-3"><a href="#">Known Issues FAQs</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Third Second Level-->
+                    <li id="child4">
+                        <a href="#">Resources and Information</a>
+                        <ul class="third">
+                            <!--First Third Level-->
+                            <li id="child4-0">
+                                <a href="#">Web Meeting</a>
+                                <ul>
+                                    <!--Fourth Second Level Sub Levels-->
+                                    <li id="child4-0-0"><a href="#">Quick Start Guide</a></li>
+                                    <li id="child4-0-1"><a href="#">Web Meeting User Guide</a></li>
+                                    <li id="child4-0-2"><a href="#">Browser Configuration Guide</a></li>
+                                    <li id="child4-0-3"><a href="#">PIV Activation</a></li>
+                                </ul>
+                            </li>
+
+                            <!--Second Third Level-->
+                            <li id="child4-1">
+                                <a href="#">Chat Service</a>
+                                <ul>
+                                    <!--Fourth Second Level Sub Levels-->
+                                    <li id="child4-1-0"><a href="#">DCS Chat Initial Login Guide</a></li>
+                                    <li id="child4-1-1"><a href="#">DCS Chat User Guide</a></li>
+                                    <li id="child4-1-2"><a href="#">Personal User Name (PUN) Information</a></li>
+                                    <li id="child4-1-3"><a href="#">DCS Chat Best Practices (TBD)</a></li>
+                                    <li id="child4-1-4"><a href="#">DCS Chat Download NIPRNet</a></li>
+                                </ul>
+                            </li>
+
+                            <!--Third Third Level-->
+                            <li id="child4-2">
+                                <a href="#">Training</a>
+                                <ul>
+                                    <!--Fourth Second Level Sub Levels-->
+                                    <li id="child4-2-0">
+                                        <a href="#">Beginner Training</a>
+                                        <ul>
+                                            <!--Second Sub Levels-->
+                                            <li id="child4-2-0-0"><a href="#">Slides</a></li>
+                                            <li id="child4-2-0-1"><a href="#">Video</a></li>
+                                            <li id="child4-2-0-2"><a href="#">Reference Guides</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="child4-2-1">
+                                        <a href="#">Advanced Training</a>
+                                        <ul>
+                                            <!--Second Sub Levels-->
+                                            <li id="child4-2-1-0"><a href="#">Slides</a></li>
+                                            <li id="child4-2-1-1"><a href="#">Video</a></li>
+                                            <li id="child4-2-1-2"><a href="#">Reference Guides</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="child4-2-2"><a href="#">DCS Chat (TransVerse) Training</a></li>
+                                    <li id="child4-2-3"><a href="#">DCS Calendar</a></li>
+                                </ul>
+                            </li>
+
+                            <!--Fourth Third Level-->
+                            <li id="child4-3">
+                                <a href="#">Resources</a>
+                                <ul>
+                                    <!--Fourth Second Level Sub Levels-->
+                                    <li id="child4-3-0">
+                                        <a href="#">Orders</a>
+                                        <ul>
+                                            <!--Second Sub Levels-->
+                                            <li id="child4-3-0-0"><a href="#">CyberCom TaskOrd 15-0019 UE</a></li>
+                                            <li id="child4-3-0-1"><a href="#">DAM 14-030 (UE)</a></li>
+                                            <li id="child4-3-0-2"><a href="#">DAM 15-009</a></li>
+                                            <li id="child4-3-0-3"><a href="#">DCS GENORD Compliance Validation</a></li>
+                                            <li id="child4-3-0-4"><a href="#">CTO 15-0019 Compliance Validation List</a></li>
+                                            <li id="child4-3-0-5"><a href="#">CTO 15-0019 Validation Snapshot</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="child4-3-1">
+                                        <a href="#">Accredidation</a>
+                                        <ul>
+                                            <!--Second Sub Levels-->
+                                            <li id="child4-3-1-0"><a href="#">DCS IATO (25 MAR 15)</a></li>
+                                            <li id="child4-3-1-1"><a href="#">DoD Reciprocity Policy</a></li>
+                                        </ul>
+                                    </li>
+                                    <li id="child4-3-2"><a href="#">DCS Portal Update Information</a></li>
+                                    <li id="child4-3-3">
+                                        <a href="#">DCS Best Practices</a>
+                                        <ul>
+                                            <!--Second Sub Levels-->
+                                            <li id="child4-3-3-0"><a href="#">Consistent Audio Performance</a></li>
+                                            <li id="child4-3-3-1"><a href="#">File Uploads Work-Around</a></li>
+                                            <li id="child4-3-3-2"><a href="#">DCS Code of Conduct for Conferences</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!--Fifth Third Level-->
+                            <li id="child4-4"><a href="#">Enhancement Requests</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Fourth Second Level-->
+                    <li id="child5">
+                        <a href="#">Getting Started</a>
+                        <ul>
+                            <!--Fourth Second Level Sub Levels-->
+                            <li id="child5-0"><a href="#">Access to DCS</a></li>
+                            <li id="child5-1"><a href="#">DCS Support Desk</a></li>
+                            <li id="child5-2"><a href="#">Setup DCS Chat</a></li>
+                            <li id="child5-3"><a href="#">Training</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Fifth Second Level-->
+                    <li id="child6"><a href="#">DCS Portal Navigation Map</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,371 @@
+﻿<!--
+******************************************
+**          USAACE Splash Page          **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>USAACE Splash Page</title>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('USAACEbackground.jpg') no-repeat fixed center;
+            background-size: 95% 100%;
+            font-family: Verdana;
+            font-size: 20px;
+        }
+
+        /*Page wide image settings*/
+        img {
+            border: none;
+            width: 150px;
+        }
+
+        /*USAACE link and logo location settings*/
+        .logo, .brigades {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+        }
+
+            /*USAACE link position settings*/
+            .logo a, .command a, .directorates a, .brigades a {
+                color: #4fa0d5;
+                text-decoration: none;
+                text-align: center;
+                display: block;
+            }
+
+                /*USAACE logo hover effects*/
+                .logo a:hover, .brigades a:hover {
+                    -ms-transform: scale(.95);
+                    opacity: 0.7;
+                    color: #f9f402;
+                }
+
+        /*Navigation link position placement*/
+        .command, .directorates {
+            position: absolute;
+            left: 65%;
+            top: 25%;
+            border-radius: 10px;
+            border: 1px solid #4fa0d5;
+            padding: 10px;
+            background: #000000;
+            padding-bottom: 0;
+        }
+
+            /*Navigation link settings and layout*/
+            .command a, .directorates a {
+                border: 1px solid #4fa0d5;
+                width: 190px;
+                height: 45px;
+                padding-top: 20px;
+                border-radius: 10px;
+                margin-bottom: 10px;
+                color: #f9f402;
+                background: #0208c0;
+            }
+
+                /*Navigation link hover effects*/
+                .command a:hover, .directorates a:hover {
+                    border: 1px solid #0208c0;
+                    color: #0208c0;
+                    font-weight: 600;
+                    -ms-transform: scale(0.9);
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxODMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDM1N0IiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMzU3QiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzE4MykiIC8+Cjwvc3ZnPg==);
+                }
+
+        /*Navigation link position placement*/
+        .directorates {
+            top: 55%;
+        }
+
+            /*Navigation link settings and layout*/
+            .directorates a {
+                width: 130px;
+            }
+
+        /*Brigade link and logo location settings*/
+        .brigades {
+            left: 85%;
+        }
+
+            /*Brigade link position settings*/
+            .brigades a {
+                margin-bottom: 20px;
+            }
+
+        .links {
+            position: absolute;
+            left: 10%;
+            top: 88%;
+        }
+
+            .links div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+        /* important for inline positioning */
+        #links_inner {
+            width: 1050px; /* important (this width = width of list item(including margin) * items shown */
+            height: 85px;
+            overflow: hidden; /* important (hide the items outside the div) */
+            /* non-important styling bellow */
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxODMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDM1N0IiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMzU3QiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzE4MykiIC8+Cjwvc3ZnPg==);
+            border: 2px solid black;
+            border-right: 3px inset white;
+            border-left: 3px inset white;
+            border-radius: 10px;
+        }
+
+        #links_ul {
+            position: relative;
+            left: -210px; /* important (this should be negative number of list items width(including margin) */
+            list-style-type: none; /* removing the default styling for unordered list items */
+            margin: 0px;
+            padding: 0px;
+            width: 9999px; /* important */
+            /* non-important styling bellow */
+            padding-bottom: 10px;
+            vertical-align: middle;
+            text-align: center;
+        }
+
+            #links_ul li {
+                float: left; /* important for inline positioning of the list items */
+                width: 200px; /* fixed width, important */
+                /* just styling bellow*/
+                padding: 0px;
+                height: 70px;
+                border-radius: 10px;
+                background: #000000;
+                margin: 10px 5px 10px 5px;
+                vertical-align: middle;
+                display: inline-block;
+            }
+
+                #links_ul li a {
+                    width: 180px;
+                    height: 35px;
+                    padding-top: 15px;
+                    margin-top: 10px;
+                    margin-bottom: -15px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    color: #f9f402;
+                    background: #0208c0;
+                    border: 1px solid black;
+                }
+
+                #links_ul li img {
+                    margin-bottom: -4px; /* IE is making a 4px gap bellow an image inside of an anchor (<a href...>) so this is to fix that*/
+                    /* styling */
+                    cursor: pointer;
+                    border: 0px;
+                }
+
+                #links_ul li a:hover {
+                    width: 202px;
+                    height: 49px;
+                    padding-top: 35px;
+                    margin-left: -3px;
+                    margin-top: -10px;
+                    color: #0208c0;
+                    font-weight: 600;
+                    border: none;
+                    border-radius: 0;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxODMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDM1N0IiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMzU3QiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzE4MykiIC8+Cjwvc3ZnPg==);
+                }
+
+        #left_scroll, #right_scroll {
+            height: 70px;
+            width: 40px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcxODMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDM1N0IiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNGRkZGRkYiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMzU3QiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzE4MykiIC8+Cjwvc3ZnPg==);
+        }
+
+        #left_scroll {
+            border-radius: 20px 0 0 20px;
+            border-right: 3px inset white;
+            margin-right: -6px;
+        }
+
+            #left_scroll:hover, #right_scroll:hover {
+                background: transparent;
+            }
+
+        #right_scroll {
+            border-radius: 0 20px 20px 0;
+            border-left: 3px inset white;
+            margin-left: -6px;
+        }
+
+        #left_scroll img {
+            cursor: url(arrow_left.cur), auto;
+            width: 40px;
+        }
+
+        #right_scroll img {
+            /*styling*/
+            cursor: url(arrow_right.cur), auto;
+            width: 40px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //move he last list item before the first item. The purpose of this is if the user clicks to slide left he will be able to see the last item.
+            $('#links_ul li:first').before($('#links_ul li:last'));
+
+            //when user clicks the image for sliding right
+            $('#right_scroll img').mouseover(function () {
+
+                //get the width of the items ( i like making the jquery part dynamic, so if you change the width in the css you won't have o change it here too ) '
+                var item_width = $('#links_ul li').outerWidth() + 10;
+
+                //calculae the new left indent of the unordered list
+                var left_indent = parseInt($('#links_ul').css('left')) - item_width;
+
+                //make the sliding effect using jquery's anumate function '
+                $('#links_ul:not(:animated)').animate({ 'left': left_indent }, 500, function () {
+
+                    //get the first list item and put it after the last list item (that's how the infinite effects is made) '
+                    $('#links_ul li:last').after($('#links_ul li:first'));
+
+                    //and get the left indent to the default -210px
+                    $('#links_ul').css({ 'left': '-210px' });
+                });
+            });
+
+            //when user clicks the image for sliding left
+            $('#left_scroll img').mouseover(function () {
+
+                var item_width = $('#links_ul li').outerWidth() + 10;
+
+                /* same as for sliding right except that it's current left indent + the item width (for the sliding right it's - item_width) */
+                var left_indent = parseInt($('#links_ul').css('left')) + item_width;
+
+                $('#links_ul:not(:animated)').animate({ 'left': left_indent }, 500, function () {
+
+                    /* when sliding to left we are moving the last item before the first list item */
+                    $('#links_ul li:first').before($('#links_ul li:last'));
+
+                    /* and again, when we make that change we are setting the left indent of our unordered list to the default -210px */
+                    $('#links_ul').css({ 'left': '-210px' });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <!--Page Header-->
+    <h1></h1>
+
+    <!--Displays link and logo to USAACE Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/SitePages/Home.aspx">
+            <img src="USAACE - Logo.png" alt="USAACE" title="Visit USAACE Portal" />
+            <div>USAACE</div>
+        </a>
+    </div>
+
+    <!--Navigation links to Command Homepage-->
+    <div class="command">
+        <a href="https://usaace-vwe.rucker.army.mil/SitePages/Dashboard.aspx">
+            <div>My Dashboard</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/CGTasker">
+            <div>CG Tasker</div>
+        </a>
+    </div>
+
+    <!--Navigation links to Directorate Homepage-->
+    <div class="directorates">
+        <a href="https://usaace-vwe.rucker.army.mil/CDIDDash/SiteAssets/Dashboard.aspx">
+            <div>CDID</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/g1g4">
+            <div>G1/G4</div>
+        </a>
+    </div>
+
+    <!--Displays links and logos to 1AB, 110th AB, and 128th AB Brigade Homepages-->
+    <div class="brigades">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab">
+            <img src="1AB Revised.png" title="Visit 1AB Portal" />
+            <div>1AB</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab">
+            <img src="110th Logo.png" title="Visit 110th AB Portal" />
+            <div>110th AB</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab">
+            <img src="128th Logo.png" title="Visit 128th AB Portal" />
+            <div>128th AB</div>
+        </a>
+    </div>
+
+    <!--Displays Navigation link slider panel on USAACE Homepage-->
+    <div class="links">
+        <div id="left_scroll">
+            <img src='arrow-left.png' width="40" height="70" />
+        </div>
+
+        <div id="links_inner">
+            <ul id="links_ul">
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/AvCPT">AvCPT</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe-tasker.rucker.army.mil/sites/AMO">AMO</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/eStaffing">eStaffing</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/g3tasker">G3 Tasker</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/g1g4sms">SMS</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/sdts">G6 Service Desk</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/exsum">Exsum</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/acop">ACOP</a>
+                </li>
+                <li>
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/KnowledgeMap/">Knowledge Map</a>
+                </li>
+            </ul>
+        </div>
+        <div id="right_scroll">
+            <img src='arrow-right.png' width="40" height="70" />
+        </div>
+    </div>
+</body>
+</html>

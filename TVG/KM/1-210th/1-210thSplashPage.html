@@ -1,0 +1,232 @@
+﻿<!--
+******************************************
+**        1-210th Splash Page           **
+**                                      **
+**  Created By:    Cesar A. Ortega      **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>1-210th Splash Page</title>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script> <!-- JQuery optional -->
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+
+            background: url('1-210Background1.2.png') no-repeat fixed center;
+            background-size: cover;
+           
+        }
+
+        /*Page wide image settings*/
+        img {
+           text-decoration:none;
+           border:0;
+            
+        }
+
+        /*Page header settings*/
+        h1 {
+            border:8px solid black;
+            text-align:center;
+            font-size:50px;
+            background-color:gold;
+            border-radius:10px;
+            padding:1px;
+            margin-top:0;
+        }
+
+        a {
+           text-align: center;
+           text-decoration: none;
+            
+        }
+
+
+        /* 1-210th link and logo location settings*/
+        .logo {
+            position: absolute;           
+            top: 10%;
+            left: 2%;
+            
+        }
+
+            /* 1-210th link position settings*/
+            .logo a {
+                display: block;
+                text-align: center;
+                font-size:40px;
+                font:bolder;
+                color:white;
+             
+            }
+
+            /* 1-210th logo settings and layout*/
+            .logo img {
+                
+            }
+
+            /* 1-210th logo hover effects*/
+            .logo a:hover {
+                position:absolute;
+                -ms-transform:scale(0.9);
+                opacity:0.8;
+
+            }
+
+        /*companies link and logo location settings*/
+           .logo, .companies {
+               
+               filter: shadow(color=#000000,direction=135,strength=5);
+        
+        }
+
+      
+       /*companies link position settings*/
+          .companies a {
+              display: block;
+              text-align: center;
+              font-size:40px;
+              font:bolder;
+              color:white;
+                
+            }
+
+          #alpha {
+              position: absolute;
+              top:15%;
+              right:2%;
+        }
+           #Bravo{
+              position: absolute;
+              top:35%;
+              right:2%;
+        }
+
+           #Charlie {
+               position: absolute;
+              top:55%;
+              right:1%;
+        }
+
+
+         /*COMPANIES logo settings and layout*/
+            .companies img {
+                height:100px;
+            }
+
+         /*companies logo hover effects*/
+            .companies a:hover {
+               
+                -ms-transform:scale(0.9);
+                opacity:0.8;
+            }
+
+         /*Navigation Link settings*/
+             .links {  
+            
+        }
+
+
+         /*links position settings*/
+            .links a {            
+            position: absolute;
+            bottom: 10px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px;
+            background: url(graybutton1.png) no-repeat;
+            background-position:center;
+            width: 180px;
+            height: 20px;
+            background-size: 225px 50px;
+            display: inline-block;
+            font-weight: bolder;
+            color: purple;
+        }
+
+            .links a:hover {
+                -ms-transform: scale(0.9);                
+                opacity: .5;
+            }
+
+             .links1 a {
+            left: 0;
+        }
+
+        .links2 a {
+            left: 375px;
+        }
+
+        .links3 a {
+            left: 740px;
+        }
+
+        .links4 a {
+            right: 350px;
+        }
+
+        
+            
+        
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>1-210th Battalion/Regiment</h1>
+
+    <!--Displays link and logo to 'name of organization' Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/Pages/default.aspx"><img src="1-210th Crest.png" title="Visit 1-210th Portal" /><div>1-210th</div></a>
+    </div>
+
+    <!--Displays links and logos to 'name of organization' Homepages-->
+    <div class="companies" id="alpha">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/1-210th_ACo/Pages/default.aspx"><img src="alpha.png" title="Visit Alpha Portal" /><div>Alpha</div></a>
+    </div>
+
+    <div class="companies" id="Bravo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/1-210th_BCo/Pages/default.aspx"><img src="Bravologo1-210th.png" title="Visit Bravo Portal" /><div>Bravo</div></a>
+    </div>
+
+    <div class="companies" id="Charlie">
+        <a href="#https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/1-210th_CCo/Pages/default.aspx"><img src="charlie.png" title="Visit Charlie Portal" /><div>Charlie</div></a>
+    </div>
+
+    <!--Displays Navigation link slider panel on  Homepage-->
+    <div class="links">
+        <div class="links1">
+            <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Knowledge%20Management/Pages/default.aspx">Knowledge Management</a>
+        </div>
+        <div class="links2">
+            <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/1210_S3/Documents/Forms/AllItems.aspx?RootFolder=%2fsites%2f128thab%2fBDE%5f1210th%2f1210%5fS3%2fDocuments%2fSchools&FolderCTID=0x012000DA055F342448C549BC940EE85F8F42CD">Schools</a>
+        </div>
+
+        <div class="links3">
+            <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/_layouts/viewlsts.aspx?BaseType=1">Libraries</a>
+        </div>
+        <div class="links4">
+            <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/_layouts/viewlsts.aspx?BaseType=0">Lists</a>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

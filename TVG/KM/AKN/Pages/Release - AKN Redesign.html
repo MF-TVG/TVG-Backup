@@ -1,0 +1,976 @@
+﻿<!--
+******************************************
+**           AKN Landing Page           **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>Aviation Knowledge Network</title>
+    <link href="../Styles/Main.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" id="page_Effect_JS">
+        $(document).ready(
+            function () {
+                $('.buttonset > a').click(
+                    function () {
+                        var isClicked = $(this).hasClass('active');
+                        var clickedId = isClicked ? 'Slideshow' : $(this).attr('id');
+
+                        $('.buttonset > a').each(
+                            function () {
+                                $(this).removeClass('active');
+                            }
+                        );
+
+                        if (!isClicked) {
+                            $(this).addClass('active');
+                        }
+
+                        $('#monitor > div').each(
+                            function () {
+                                if ($(this).css('display') == 'block') {
+                                    $(this).fadeOut(200);
+
+                                    if ($(this).hasClass('FlightTrainingLinkAnimate')) {
+                                        $(this).animate({
+                                            top: '-100%'
+                                        }, 200);
+                                    }
+                                    else if ($(this).hasClass('DOTDLinkAnimate')) {
+                                        $(this).animate({
+                                            left: '-100%'
+                                        }, 200);
+                                    }
+                                    else if ($(this).hasClass('UnitLinkAnimate')) {
+                                        $(this).animate({
+                                            left: '100%'
+                                        }, 200);
+                                    }
+                                    else if ($(this).hasClass('HelpfulLinkAnimate')) {
+                                        $(this).animate({
+                                            top: '100%'
+                                        }, 200);
+                                    }
+                                }
+                            }
+                        );
+
+                        var newMonitor = $('#monitor' + clickedId);
+
+                        newMonitor.delay(200).fadeIn(200);
+
+                        if (newMonitor.hasClass('FlightTrainingLinkAnimate')) {
+                            newMonitor.animate({
+                                top: '0%'
+                            }, 200);
+                        }
+                        else if (newMonitor.hasClass('DOTDLinkAnimate')) {
+                            newMonitor.animate({
+                                left: '0%'
+                            }, 200);
+                        }
+                        else if (newMonitor.hasClass('HelpfulLinkAnimate')) {
+                            newMonitor.animate({
+                                top: '0%'
+                            }, 200);
+                        }
+                        else if (newMonitor.hasClass('UnitLinkAnimate')) {
+                            newMonitor.animate({
+                                left: '0%'
+                            }, 200);
+                        }
+                    }
+                );
+            }
+        );
+    </script>
+</head>
+<body>
+    <div>
+        <!-- Header Elements -->
+        <header id="headerPanel">
+
+            <!-- CG Information -->
+            <div id="general">
+                <img src="../Images/lundy m mg.jpg" />
+                <span>MG Michael D. Lundy<br />Commanding General<br />USAACE</span>
+            </div>
+
+            <div id="aknHeader">
+                <span>Aviation Knowledge Network</span>
+                <img id="logo" src="../Images/USAACE - Logo.png" />
+            </div>
+        </header>
+
+        <main id="bodyPanel">
+            <!-- Body Elements -->
+            <div id="topLeft">
+                <a id="topleft0"></a>
+            </div>
+
+            <!-- L3 Content -->
+            <div id="FlightTrainingLinks" class="buttonset">
+                <a id="FlightTrainingLinks0"><div>UH-60</div></a>
+                <a id="FlightTrainingLinks1"><div>AH-64</div></a>
+                <a id="FlightTrainingLinks2"><div>CH-47</div></a>
+                <a id="FlightTrainingLinks3"><div>LUH-72</div></a>
+                <a id="FlightTrainingLinks4"><div>TH-67</div></a>
+                <a id="FlightTrainingLinks5"><div>UAS</div></a>
+                <a id="FlightTrainingLinks6"><div style="margin-top: 25px;">AVN Library</div></a>
+                <a id="FlightTrainingLinks7"><div style="margin-top: 15px;">Flight Mission Planning</div></a>
+                <a id="FlightTrainingLinks8"><div style="margin-top: 25px;">Safety & Standards</div></a>
+                <a id="FlightTrainingLinks9"><div style="margin-top: 25px;">Maint. & Logistics</div></a>
+            </div>
+
+            <!-- Top Right button content -->
+            <div id="topRight">
+                <a onclick="window.open('../Pages/RequestForInformation.html','RFI','height=550, width=550, scrollbars=yes')" title="Submit RFI">RFI</a>
+            </div>
+
+            <!-- Reference Content -->
+            <div id="DOTDLinks" class="buttonset">
+                <a id="DOTDLinks0"><div>Aviation Digest</div></a>
+                <a id="DOTDLinks1"><div>Lessons Learned</div></a>
+                <a id="DOTDLinks2"><div>Aviation Apps</div></a>
+                <a id="DOTDLinks3"><div style="margin-top: 20px;">Training & Doctrine</div></a>
+                <a id="DOTDLinks4"><div style="margin-top: 40px;">ASDAT</div></a>
+            </div>
+
+            <!-- Center Display Content -->
+            <div id="monitor">
+                <!-- Cascading List of Content -->
+                <div id="monitorSlideshow" style="display:block" >
+                    <img src="../Images/slides.gif" />
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks0" class="FlightTrainingLinkAnimate">
+                    <ul id="top0" class="top">
+                        <li>
+                            <a>UH-60M</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674431">UH-60M AVIATOR QUAL/IP (TRANS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/689146">UH-60M AVIATOR QUAL (FULL UP)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674440">UH-60M INSTRUCTOR PILOT/MOI (TRANS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674433">UH-60M INSTRUCTOR PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674439">UH-60M INSTRUCTOR PILOT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674441">UH-60M MAINTENANCE TEST PILOT (TRANS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674436">UH-60M MAINTENANCE TEST PILOT</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>UH-60A/L</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674411">AIRCRAFT CREWMBR STANDARD INSTRUCTION (UH-60)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674341">IERW UH-60 TRACK</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674342">IERW UH-60A/M TRACK</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674424">UH-60 AVIATOR QUALIFICATION</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674427">UH-60 INSTRUCTOR PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674429">UH-60 INSTRUCTOR PILOT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/668065">UH-60 MAINTENANCE TEST PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674400">SPANISH UH-60 AVIATOR QUALIFICATION</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674393">SPANISH UH-60 INSTRUCTOR PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674391">SPANISH UH-60 MAINTENANCE TEST PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/674398">SPANISH AVIATOR (UH-60FS) (REFRESHER)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks1" class="FlightTrainingLinkAnimate">
+                    <ul id="top1" class="top">
+                        <li>
+                            <a>AH-64D</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681737">Aviation Specific Prep</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/685990">Aviator Qualification</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681746">Aviator Qualification (Block III)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681751">Aviation Qualification-Block 3 (TRANS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681752">Aviator Refresher (MOB)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/682711">AH-64D (BLOCK III) TRACK IERW</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/682713">AH-64D Track IERW</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>AH-64E</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks2" class="FlightTrainingLinkAnimate">
+                    <ul id="top2" class="top">
+                        <li>
+                            <a>CH-47D</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681870">CH-47D AVIATOR QUALIFICATION</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681870">CH-47D AVIATOR QUALIFICATION (SOA)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681731">CH-47D INSTRUCTOR PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681731">CH-47D INSTRUCTOR PILOT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681731">CH-47D INSTRUCTOR PILOT MOI (REFR)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/679758">AIRCRAFT CREWMBR STANDARD INSTRUCTION</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/679777">CH-47D MAINTENANCE TEST PILOT</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>CH-47F</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681700">CH-47F AVIATOR QUALIFICATION</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/687748">CH-47F AVIATOR QUAL/IP (TRANS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681730">CH-47F INSTRUCTOR PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681730">CH-47F INSTRUCTOR PILOT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681730">CH-47F INSTRUCTOR PILOT MOI (REFR)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/679563">CH-47F MAINTENANCE TEST PILOT</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/679560">CH-47F MAINTENANCE TEST PILOT (TRANS)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks3" class="FlightTrainingLinkAnimate">
+                    <ul id="top3" class="top">
+                        <li>
+                            <a>LUH-72</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks4" class="FlightTrainingLinkAnimate">
+                    <ul id="top4" class="top">
+                        <li>
+                            <a>TH-67</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681581">RW ADVANCED IFR TRAINING (EURO-NATO)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/682643">PRIMARY INSTRUCTOR PILOT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681719">ROTARY WING INSTRUMENT (GERMAN)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681720">ROTARY WING INSTRUMENT (NONUS)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681725">ROTARY WING INSTRUMENT FLIGHT EXAMINER</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681726">ROTARY WING INSTRUMENT MOI</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/681727">INITIAL ENTRY ROTARY WING AVR (COMMON CORE)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks5" class="FlightTrainingLinkAnimate">
+                    <ul id="top5" class="top">
+                        <li>
+                            <a>UAS</a>
+                            <ul>
+                                <li>
+                                    <a>15Q</a>
+                                </li>
+                                <li>
+                                    <a>15P</a>
+                                </li>
+                                <li>
+                                    <a>15W</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks6" class="FlightTrainingLinkAnimate">
+                    <ul id="top6" class="top">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/679625">Aviation Library</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks7" class="FlightTrainingLinkAnimate">
+                    <ul id="top7" class="top">
+                        <li>
+                            <a>Flight Mission Resources</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/doc/29682946">ABCS Pocket Guide</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/doc/29682947">Battle Cmd Systems Training</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.falconview.org/trac/FalconView">FalconView Application</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.baseops.net/">Flight Planning (General)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.airnav.com/plan/fuel">Fuel Stop Planner</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://pilotweb.nas.faa.gov/PilotWeb/">NOTAMS (FAA)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.airnav.com/airports">Search Airports</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.airnav.com/airspace/fix">Search Airspace Fixes</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.airnav.com/navaids">Search NAVAIDS</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/611406">Tact. Terrain Visualization Sys</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Weather Planning</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="http://aviationweather.gov/">Wx Forecasts (NOAA)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.noaa.gov/">Wx Homepage (NOAA)</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://www.weather.com/">Wx (the Weather Channel)</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks8" class="FlightTrainingLinkAnimate">
+                    <ul id="top8" class="top">
+                        <li>
+                            <a target="_blank" href="http://arat.army.mil/">ARAT</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/395105">ASDAT</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.aviationsafetymagazine.com/">Avn Safety Magazine</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/389908">Avn Tactics Division (DOTD)</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.rucker.army.mil/usaace/directorates/abso.html">Avn Branch Safety Office (ABSO)</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://safety.army.mil/">CRC Saftey Center</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/646242">Graduate Branch Acedemics</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/grouppage/156107">Quality Assurance</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/grouppage/38814">Standardization</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/652558">TACOPS Course</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/656345">TACOPS Survivability (DOTD)</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://atn.army.mil/dsp_CATSviewer01.aspx">Tasks/Cond/STDs: Avn Logistics</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorFlightTrainingLinks9" class="FlightTrainingLinkAnimate">
+                    <ul id="top9" class="top">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/612731">Avn Maintenence Ofcr Course</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://upw.jtdi.mil/">Joint Technical Data Integration</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://liw.logsa.army.mil/">LOGSA</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.logsa.army.mil/etms/online.cfm">LOGSA-EMTs</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/doc/29715593">LOGSA Guide</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://www.armyproperty.com/">Property Search by LIN/NSN</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://tammsa.redstone.army.mil/">TAMMS-A Portal</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://atn.army.mil/dsp_CATSviewer01.aspx">Tasks/Cond/Stds: Avn Logistics</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://tmde-register.us.army.mil/">TMDE</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorDOTDLinks0" class="DOTDLinkAnimate">
+                    <ul id="left0" class="left">
+                        <li>
+                            <a target="_blank" href="http://www.rucker.army.mil/aviationdigest/">Avn Digest</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/667792">Tactics Newsletter</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorDOTDLinks1" class="DOTDLinkAnimate">
+                    <ul id="left1" class="left">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/39923338">Umbrella Week</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/37593652">Air/Ground Operations</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/34981031">Air Traffic Services</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/39919547">Attack Reconnaissance</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/34981030">Aviation Maintenance</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/35640523">Brigade Aviation Element</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/39919470">Cargo Heavy Lift</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/41071489">Fixed Wing</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/39919532">Utility/MEDEVAC</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/39922903">Observations, Lessons Learned</a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/files/34981029">Unmanned Aircraft Systems</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorDOTDLinks2" class="DOTDLinkAnimate">
+                    <ul id="left2" class="left">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/690282">Aviation Apps (AAIMI)</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorDOTDLinks3" class="DOTDLinkAnimate">
+                    <ul id="left3" class="left">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/692511">Aviation Training</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/files/37641616">Aviation Training Strategy</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/634245">Training Support Packages (TSP)</a>
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/43315724">Airfield Management Element (AME)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="/UAS Tng Strategy (v7.1) with CATS.pdf">Unmanned Aircraft Systems (UAS)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/page/691190">Flight Training</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/43167177">Maritime Operations</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="http://armypubs.army.mil/doctrine/index.html">Training Publications</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/667522">Aircrew Training Program (ATP)</a>
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="/tc3_04x11.pdf">TC 3-04.11 Commander’s Aircrew Training Program for Individual, Crew, and Collective Training</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/42983054">Aircrew Training Manuals</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/691246">Distributed Learning</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/471181">Gunnery</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/675647">Collective Training</a>
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/37640554">Unit Training Management (UTM)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/37646840 ">Mission Essential Tasks (MET)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/files/43625915">Unit Task Lists (UTL)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://atn.army.mil/dsp_CATSviewer01.aspx">Combined Arms Training Strategies (CATS)</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://www.us.army.mil/suite/page/634245">Training Support Packages</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://armypubs.army.mil/">Aviation Publication</a>
+                            <ul>
+                                <li>
+                                    <a>FM 3-04 Army Aviation</a>
+                                </li>
+                                <li>
+                                    <a>ATP 3-04.1 Army Aviation Tactical Employment</a>
+                                </li>
+                                <li>
+                                    <a>TC 3-04.2 - 3-04.7</a>
+                                    <ul id="tc_2_to_7">
+                                        <li>
+                                            <a>TC 3-04.2 Aircraft Combat Survivability (Classified)</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.3 Combat Aviation Gunnery</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.4 Fundamentals of Flight</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.5 Instrument Flight for Army Aviators</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.6 Air Traffic Services</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.7 Army Aviation Maintenance</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>TC 3-04.8 - 3-04.13</a>
+                                    <ul id="tc_8_to_13">
+                                        <li>
+                                            <a>TC 3-04.8 Individual Flight Records Folder Management</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.9 Commander’s Aviation Mission Survivability Program</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.10 Aviation Life Support System Maintenance</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="/tc3_04x11.pdf">TC 3-04.11 Commander’s Aircrew Training Program for Individual, Crew, and Collective Training</a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="/TC 3-04.12 Final Draft 20150126.pdf">TC 3-04.12 Aviation Mission Planning Forms</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.13 Aeromedical Training for Flight Personnel</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>TC 3-04.14 - 3-04.18</a>
+                                    <ul id="tc_14_to_18">
+                                        <li>
+                                            <a>TC 3-04.14 Meteorology for Army Aviators</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.15 Air Traffic Services Facility Training, Maintenance, and Standardization</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.16 Airfield Management</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.17 Tactics, Techniques, and Procedures for Forward Arming and Refueling Points</a>
+                                        </li>
+                                        <li>
+                                            <a>TC 3-04.18 Aviation Operations in Maritime Surface Warfare</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/394729">Aviation Doctrine</a>
+                            <ul>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/394729">Aviation Doctrine</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/471181">Gunnery</a>
+                                </li>
+                                <li>
+                                    <a target="_blank" href="https://www.us.army.mil/suite/page/664976">Survivability</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorDOTDLinks4" class="DOTDLinkAnimate">
+                    <ul id="left4" class="left">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/community/8816824">Aircraft Shoot Down Assessment Team</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorunitLinks0" class="UnitLinkAnimate">
+                    <ul id="right0" class="right">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/308216">1st Aviation Brigade</a>
+                            <ul>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/778">1-145th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/726">1-13th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/508757">2-13th Aviation Battalion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorunitLinks1" class="UnitLinkAnimate">
+                    <ul id="right1" class="right">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/247694">110th Aviation Brigade</a>
+                            <ul>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/678510">1-11th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/505487">1-212th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/681515">1-223rd Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/681722">1-14th Aviation Battalion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorunitLinks2" class="UnitLinkAnimate">
+                    <ul id="right2" class="right">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/658872">128th Aviation Brigade</a>
+                            <ul>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/681859">1-210th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/681860">2-210th Aviation Battalion</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/681858">1-222nd Aviation Battalion</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorunitLinks3" class="UnitLinkAnimate">
+                    <ul id="right3" class="right">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/645711">USAACE NCOA</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorunitLinks4" class="UnitLinkAnimate">
+                    <ul id="right4" class="right">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/664048">JBLE NCOA</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks0" class="HelpfulLinkAnimate">
+                    <ul id="bottom0" class="bottom">
+                        <li>
+                            <form onsubmit="location='mailto:john.p.hendricks.ctr@mail.mil;marcus.p.faye.ctr@mail.mil;robert.a.bellot.ctr@mail.mil'+'?subject=AKN Site Feedback'+'&body=Name: '+escape(this.name.value)+'%0D%0A'+'%0D%0A'+'Email: '+escape(this.email.value)+'%0D%0A'+'%0D%0A'+'Comments: '+escape(this.comments.value);return false">
+                                <p style="font-size: 16px;">Submit Feedback</p>
+                                <label for="name">Name:</label><br />
+                                <textarea cols="2" rows="1" maxlength=35 style="width: 400px;" name="name" value=""></textarea><br /><br />
+                                <label for="email">E-mail:</label><br />
+                                <textarea cols="2" rows="1" maxlength=35 style="width: 400px;" name=email></textarea><br /><br />
+                                <label for="comments">Comments:</label><br />
+                                <textarea cols="2" rows="7" style="height: 250px; width: 400px;" name=comments></textarea>
+                                <br /><br />
+                                <input style="width: 100px; height: 40px;" type="submit" value="Submit" onmouseover="this.style.color = 'darkgreen'" onmouseout="this.style.color = 'black'" onclick="window.location.reload()"/>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks1" class="HelpfulLinkAnimate">
+                    <ul id="bottom1" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/253393">How To Become an Aviator</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks2" class="HelpfulLinkAnimate">
+                    <ul id="bottom2" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/doc/31814420">Aviation Battle Book</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks3" class="HelpfulLinkAnimate">
+                    <ul id="bottom3" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/doc/25226523">USAACE Knowledge Map</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks4" class="HelpfulLinkAnimate">
+                    <ul id="bottom4" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/doc/41460676">Force Structure Book</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks5" class="HelpfulLinkAnimate">
+                    <ul id="bottom5" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/doc/25993242&inline=true">USAACE Links</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks6" class="HelpfulLinkAnimate">
+                    <ul id="bottom6" class="bottom">
+                        <li>
+                            <a>Training Tools</a>
+                            <ul>
+                                <li><a target="_blank" href="http://www.acronymfinder.com/">Acronym Finder</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/wiki/Wiki/Portal:Army_Doctrine">Army Doctrine Web (milwiki)</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/392972">Aviation Kit Bag</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/doc/31790570">Aviation Smart Book</a></li>
+                                <li><a target="_blank" href="https://atn.army.mil/">Army Training Network (ATN)</a></li>
+                                <li><a target="_blank" href="http://www.dvidshub.net/">Defense Video & Imagery Distro</a></li>
+                                <li><a target="_blank" href="http://www.dtic.mil/doctrine/dod_dictionary">DoD Dictionary of Military Terms</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>Online Training Tools</a>
+                            <ul>
+                                <li><a target="_blank" href="https://milspace.army.mil/CommunityBrowser.aspx">MilSpace</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/">MilSuite (Secure Collaboration)</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/wiki/How_to_use_milSuite#Training_for_milSuite_products">milSuite Training/How to's</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/blog">milBlog (Military Blogs)</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/book">milBook (Military Facebook)</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/video">milTube (Military YouTube)</a></li>
+                                <li><a target="_blank" href="https://www.milsuite.mil/wiki">milwiki (Military wikipedia)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks7" class="HelpfulLinkAnimate">
+                    <ul id="bottom7" class="bottom">
+                        <li>
+                            <a>Forums</a>
+                            <ul>
+                                <li><a target="_blank" href="https://www.milsuite.mil/book/community/spaces/apf/aviation_warfighters__forum_(avwff)">Avn Community of Practice</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/586278">Fires WfF</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/294455">Intelligence WfF</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/275589">Rapid Adaptation Net</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/275589">S3/XO Net</a></li>
+                                <li><a target="_blank" href="https://www.us.army.mil/suite/page/372426">Sustain WfF</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks8" class="HelpfulLinkAnimate">
+                    <ul id="bottom8" class="bottom">
+                        <li>
+                            <a target="_blank" href="https://www.us.army.mil/suite/page/685009">Professional Development</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Cascading List of Content -->
+                <div id="monitorhelpfulLinks9" class="HelpfulLinkAnimate">
+                    <ul id="bottom9" class="bottom"></ul>
+                </div>
+            </div>
+
+            <!-- Middle screen glass overlay content -->
+            <div id="screenOverlay">
+                <img src="../Images/glass.png" />
+            </div>
+
+            <!-- Unit & Organization Content -->
+            <div id="unitLinks" class="buttonset">
+                <a id="unitLinks0"><div style="margin-top: 15px;">1st Aviation Brigade</div></a>
+                <a id="unitLinks1"><div style="margin-top: 15px;">110th Aviation Brigade</div></a>
+                <a id="unitLinks2"><div style="margin-top: 15px;">128th Aviation Brigade</div></a>
+                <a id="unitLinks3"><div>USAACE NCOA</div></a>
+                <a id="unitLinks4"><div>JBLE &nbsp;NCOA</div></a>
+            </div>
+
+            <!-- Bottom Left button content -->
+            <div id="bottomLeft">
+                <a target="_blank" id="bottomLeft0" href="https://conference.apps.mil/"><div>DCS</div></a>
+            </div>
+
+            <!-- Helpful Link Content -->
+            <div id="helpfulLinks" class="buttonset">
+                <a id="helpfulLinks0"><div style="color: blue;" onclick="this.style.color = 'red'" onmouseover="this.style.color = 'red'" onmouseout="this.style.color='blue'" >Submit Feedback About This Site</div></a>
+                <a id="helpfulLinks1"><div>How To Become an Aviator</div></a>
+                <a id="helpfulLinks2"><div>Aviation Battle Book</div></a>
+                <a id="helpfulLinks3"><div style="margin-left: 25px;">USAACE Knowledge Map</div></a>
+                <a id="helpfulLinks4"><div>Force Structure Book</div></a>
+                <a id="helpfulLinks5"><div style="margin-top: 50px;">USAACE Links</div></a>
+                <a id="helpfulLinks6"><div style="margin-top: 50px; margin-left: 25px;">Leadership Tools</div></a>
+                <a id="helpfulLinks7"><div style="margin-top: 60px;">Forums</div></a>
+                <a id="helpfulLinks8"><div style="margin-top: 50px; margin-left: 20px; font-size: 14px;">Professional Development</div></a>
+                <a id="helpfulLinks9"><div></div></a>
+            </div>
+
+            <!-- Bottom Right button content -->
+            <div id="bottomRight">
+                <a target="_blank" href="https://www.milsuite.mil/book/community/spaces/apf/aviation_warfighters__forum_(avwff)"><div id="bottomRight0">ACoP</div></a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

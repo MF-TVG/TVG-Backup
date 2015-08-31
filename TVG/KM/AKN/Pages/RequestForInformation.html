@@ -1,0 +1,32 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>RFI Form</title>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta content="MSHTML 6.00.6000.16681" name=GENERATOR>
+    <style type="text/css">
+        body {
+            text-align: center;
+            background-image: url(../Images/aknbackground.png);
+            background-size: 300px;
+            color: yellow;
+            filter: shadow(color=graytext, direction=225,strength=2);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="location='mailto:kiara.s.ravenel.ctr@mail.mil;john.p.hendricks.ctr@mail.mil'+'?subject=RFI from AKN'+'&body=Name: '+escape(this.name.value)+'%0D%0A'+'%0D%0A'+'Email: '+escape(this.email.value)+'%0D%0A'+'%0D%0A'+'Comments: '+escape(this.comments.value);return false">
+        <label>Submit your Request For Information below. <br>Our goal is to respond within 24 hours</label><br /><br />
+        <label>To expedite your request, list your questions/issues including any background information.</label><br /><br />
+        <label for="name">Name:</label><br />
+        <textarea cols="2" rows="1" maxlength=35 style="width: 250px;" name="name"></textarea><br /><br />
+        <label for="email">E-mail:</label><br />
+        <textarea cols="2" rows="1" maxlength=35 style="width: 250px;" name="email"></textarea><br /><br />
+        <label for="comments">Questions/issues:</label><br />
+        <textarea cols="2" rows="7" style="height: 200px; width: 250px;" name=comments></textarea><br /><br />
+        <input class="buttons" type="submit" value="Submit" onclick="window.location.reload()">
+    </form>
+</body>
+</html>

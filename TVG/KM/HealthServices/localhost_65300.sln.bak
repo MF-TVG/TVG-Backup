@@ -1,0 +1,196 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HealthServices4", "http://localhost:65205", "{10FFCB5B-C7A6-41F8-B9FB-6F93570853FD}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65205"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\HealthServices4\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65205\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65205"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\HealthServices4\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65205\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\HealthServices4\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HealthServices4-Branch", "http://localhost:65463", "{8D47D2B2-47E5-4FAE-83AB-71A66FBFBA62}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_65463"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\HealthServices4-Branch\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65463\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_65463"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\HealthServices4-Branch\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_65463\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\HealthServices4-Branch\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "HealthServices4-branch-branch", "http://localhost:61489", "{FCCA813B-FAD7-4DAD-AB15-FB31D451B750}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61489"
+		Debug.AspNetCompiler.PhysicalPath = "HealthServices4-branch-branch\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61489\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61489"
+		Release.AspNetCompiler.PhysicalPath = "HealthServices4-branch-branch\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61489\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "HealthServices4-branch-branch\"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "TestCalendar", "http://localhost:58756", "{48092403-BB7F-4F7D-A943-F900D73CFE75}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_58756"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\TestCalendar\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58756\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_58756"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\TestCalendar\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_58756\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\TestCalendar\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sample", "http://localhost:64047", "{25050A95-8AA8-4788-AFF0-A00E7E9A9AF5}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_64047"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\WebSites\Sample\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64047\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_64047"
+		Release.AspNetCompiler.PhysicalPath = "..\..\WebSites\Sample\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_64047\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\..\WebSites\Sample\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rucka0011spsdt1:8080/tfs/usaace
+		SccLocalPath0 = .
+		SccWebProject1 = true
+		SccProjectUniqueName1 = http://localhost:65205
+		SccProjectName1 = HealthServices4
+		SccLocalPath1 = ..\\..\\WebSites\\HealthServices4
+		SccProjectEnlistmentChoice1 = 2
+		SccWebProject2 = true
+		SccProjectUniqueName2 = http://localhost:65463
+		SccProjectName2 = HealthServices4-Branch
+		SccLocalPath2 = ..\\..\\WebSites\\HealthServices4-Branch
+		SccProjectEnlistmentChoice2 = 2
+		SccWebProject3 = true
+		SccProjectUniqueName3 = http://localhost:61489
+		SccProjectName3 = HealthServices4-branch-branch
+		SccLocalPath3 = HealthServices4-branch-branch
+		SccProjectEnlistmentChoice3 = 2
+		SccWebProject4 = true
+		SccProjectUniqueName4 = http://localhost:58756
+		SccProjectName4 = TestCalendar
+		SccLocalPath4 = ..\\..\\WebSites\\TestCalendar
+		SccProjectEnlistmentChoice4 = 2
+		SccWebProject5 = true
+		SccProjectUniqueName5 = http://localhost:64047
+		SccProjectName5 = Sample
+		SccLocalPath5 = ..\\..\\WebSites\\Sample
+		SccProjectEnlistmentChoice5 = 2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10FFCB5B-C7A6-41F8-B9FB-6F93570853FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FFCB5B-C7A6-41F8-B9FB-6F93570853FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FFCB5B-C7A6-41F8-B9FB-6F93570853FD}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FFCB5B-C7A6-41F8-B9FB-6F93570853FD}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8D47D2B2-47E5-4FAE-83AB-71A66FBFBA62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D47D2B2-47E5-4FAE-83AB-71A66FBFBA62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D47D2B2-47E5-4FAE-83AB-71A66FBFBA62}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D47D2B2-47E5-4FAE-83AB-71A66FBFBA62}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{FCCA813B-FAD7-4DAD-AB15-FB31D451B750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCA813B-FAD7-4DAD-AB15-FB31D451B750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCA813B-FAD7-4DAD-AB15-FB31D451B750}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCA813B-FAD7-4DAD-AB15-FB31D451B750}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{48092403-BB7F-4F7D-A943-F900D73CFE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48092403-BB7F-4F7D-A943-F900D73CFE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48092403-BB7F-4F7D-A943-F900D73CFE75}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{48092403-BB7F-4F7D-A943-F900D73CFE75}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{25050A95-8AA8-4788-AFF0-A00E7E9A9AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25050A95-8AA8-4788-AFF0-A00E7E9A9AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25050A95-8AA8-4788-AFF0-A00E7E9A9AF5}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{25050A95-8AA8-4788-AFF0-A00E7E9A9AF5}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,160 @@
+﻿<!--
+******************************************
+**         1st Aviation Battalion       **
+**       145th Regiment Splash Page     **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>1st Aviation Battalion 145th Regiment Splash Page</title>
+    <link rel="stylesheet" type="text/css" href="1-145thSplashPage.css" />
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('1-145thBackground.jpg') no-repeat center fixed;
+            background-size: cover;
+            font-family: Verdana;
+        }
+
+        /*Page wide image settings*/
+        img {
+            border: 0;
+            width: 150px;
+            height: 150px;
+        }
+
+        /*Regiment link and logo location settings*/
+        .logo {
+            position: absolute;
+            left: 5%;
+            top: 10%;
+            width: 150px;
+        }
+
+            /*Regiment link position settings*/
+            .logo a, .companies a, .links a {
+                display: block;
+                text-align: center;
+                color: #275c93;
+                font-weight: bolder;
+                font-size: 20px;
+                text-decoration: none;
+            }
+
+                .logo a:hover, .companies a:hover, .links a:hover {
+                    opacity: 0.8;
+                    color: #f5ff0d;
+                    -ms-transform: scale(0.9);
+                }
+
+        /*Company link and logo location settings*/
+        .companies {
+            position: absolute;
+            right: 5%;
+            top: 2%;
+            width: 150px;
+        }
+
+            /*Company link position settings*/
+            .companies a {
+                margin-bottom: 20px;
+            }
+
+                #silver_wings_link {
+                    margin-top: -100px;
+                    margin-left: -350px;
+                    width: 300px;
+                }
+
+                    #silver_wings_link img {
+                        width: 300px;
+                        height: 100px;
+                    }
+
+
+        /*Navigation link position placement*/
+        .links {
+            position: absolute;
+            top: 55%;
+            left: 5%;
+            width: 220px;
+        }
+
+            /*Navigation link settings and layout*/
+            .links a {
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc1MDUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMTAwJSIgeTE9IjEwMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgo8c3RvcCBzdG9wLWNvbG9yPSIjNjE5MkMyIiBvZmZzZXQ9IjAiLz48c3RvcCBzdG9wLWNvbG9yPSIjOUZBM0MyIiBvZmZzZXQ9Ii4xIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0QxRDdGRiIgb2Zmc2V0PSIuMTUiLz48c3RvcCBzdG9wLWNvbG9yPSIjQjBEQUZGIiBvZmZzZXQ9Ii40NSIvPjxzdG9wIHN0b3AtY29sb3I9IiNBNkMxRkYiIG9mZnNldD0iLjY1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0VCRUVGRiIgb2Zmc2V0PSIuNjkiLz48c3RvcCBzdG9wLWNvbG9yPSIjRTZFQkZGIiBvZmZzZXQ9Ii43Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0VCRUVGRiIgb2Zmc2V0PSIuNzMiLz48c3RvcCBzdG9wLWNvbG9yPSIjRTZFQkZGIiBvZmZzZXQ9Ii43NSIvPjxzdG9wIHN0b3AtY29sb3I9IiM4Q0M5RkYiIG9mZnNldD0iLjkiLz48c3RvcCBzdG9wLWNvbG9yPSIjNjlBQUZGIiBvZmZzZXQ9Ii45NSIvPjxzdG9wIHN0b3AtY29sb3I9IiM1OTkxRkYiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c1MDUpIiAvPgo8L3N2Zz4=);
+                border-radius: 5px;
+                border: solid #5991FF;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+                /*Navigation link hover effects*/
+                .links a:hover {
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc3MTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MTkyQzIiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM5RkEzQzIiIG9mZnNldD0iLjEiLz48c3RvcCBzdG9wLWNvbG9yPSIjRDFEN0ZGIiBvZmZzZXQ9Ii4xNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNCMERBRkYiIG9mZnNldD0iLjQ1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0E2QzFGRiIgb2Zmc2V0PSIuNjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRUJFRUZGIiBvZmZzZXQ9Ii42OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkVCRkYiIG9mZnNldD0iLjciLz48c3RvcCBzdG9wLWNvbG9yPSIjRUJFRUZGIiBvZmZzZXQ9Ii43MyIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkVCRkYiIG9mZnNldD0iLjc1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzhDQzlGRiIgb2Zmc2V0PSIuOSIvPjxzdG9wIHN0b3AtY29sb3I9IiM2OUFBRkYiIG9mZnNldD0iLjk1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzU5OTFGRiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzcxNikiIC8+Cjwvc3ZnPg==);
+                    border-color: #5991FF;
+                }
+    </style>
+</head>
+<body>
+    <!--Displays link and logo to 1-145th Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/Pages/default.aspx">
+            <img src="1-145th Revised.png" alt="1st Aviation Battalion 145th Regiment" title="Visit 1st Aviation Battalion 145th Regiment Portal" />
+            <div>1-145th</div><div>Home</div>
+        </a>
+    </div>
+
+    <!--Displays links and logos to Alpha, Bravo, Delta,  and Silver Wings Homepages-->
+    <div class="companies">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/A%201-145th/Pages/default.aspx">
+            <div>Anvils</div>
+            <img src="ACO.png" title="Visit Alpha Company Portal" />
+            <div>A Co</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/B_1-145th/Pages/default.aspx">
+            <div>Sabers</div>
+            <img src="BCO.png" title="Visit Bravo Company Portal" />
+            <div>B Co</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/D_1-145th/Pages/default.aspx">
+            <div>Darkhorse Warriors</div><img src="DCO.png" title="Visit Delta Company Portal" />
+            <div>D Co</div>
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/1-145TH%20SERE/Pages/default.aspx">
+            <div>Return With Honor</div>
+            <img src="ReturnWithHonor.png" title="Visit Return With Honor Portal" />
+        </a>
+        <a href="#" id="silver_wings_link">
+            <img src="SilverWings.png" title="Visit Silver Wings Portal" />
+        </a>
+    </div>
+    <!--Naviagation links to 1AB Homepage-->
+    <div class="links">
+        <a class="button" href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/Lists/Announcements/AllItems.aspx">Announcements</a>
+        <a class="button" href="#">DSR</a>
+        <a class="button" href="#">Alert Roster</a>
+        <a class="button" href="#">Policy Memos</a>
+        <a class="button" href="https://usaace-vwe.rucker.army.mil/sites/1ab/1-145th/Lists/Tasks/AllItems.aspx">Tasks</a>
+        <a class="button" href="#">References</a>
+    </div>
+</body>
+</html>

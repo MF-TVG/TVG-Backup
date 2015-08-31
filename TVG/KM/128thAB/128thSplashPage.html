@@ -1,0 +1,171 @@
+﻿<!--
+******************************************
+**  128th Aviation Brigade Splash Page  **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>128th Aviation Brigade</title>
+    <link rel="stylesheet" type="text/css" href="128th-ABSplashPage.css" />
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('USAACE128thbackground.jpg') no-repeat center fixed;
+            background-size: cover;
+            font-family: Verdana;
+        }
+
+        /*Page wide image settings*/
+        img {
+            width: 130px;
+            border: none;
+        }
+
+        /*Page header settings*/
+        h1 {
+            position: absolute;
+            left: 25%;
+            color: #d7bd7b;
+            text-align: center;
+            border-top: 3px groove #d7bd7b;
+            border-right: 3px inset #151596;
+            border-bottom: 3px ridge #d7bd7b;
+            border-left: 3px inset #151596;
+            border-radius: 5px;
+            width: 50%;
+            font-size: 40px;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc2NTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNEN0JEN0IiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiMxQTFBQkEiIG9mZnNldD0iMC4yNSIvPjxzdG9wIHN0b3AtY29sb3I9IiMxNTE1OTYiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzFBMUFCQSIgb2Zmc2V0PSIwLjc1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0Q3QkQ3QiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzY1NSkiIC8+Cjwvc3ZnPg==);
+        }
+
+        /*Regiment link and logo location settings*/
+        .logo {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            width: 150px;
+        }
+
+            /*Regiment link position settings*/
+            .logo a, .battalions a {
+                display: block;
+                text-align: center;
+                opacity: 0.8;
+                text-decoration: none;
+                color: #2121d9;
+                font-size: 20px;
+            }
+
+                .logo a:hover, .battalions a:hover {
+                    -ms-transform: scale(1.05,1.05);
+                    filter: shadow(color=#d7bd7b, direction=45, strength=1) shadow(color=#d7bd7b, direction=135, strength=1) shadow(color=#d7bd7b, direction=225, strength=1) shadow(color=#d7bd7b, direction=315, strength=1);
+                    opacity: 1.0;
+                    color: #151596;
+                }
+
+        /*Regiment link and logo location settings*/
+        .battalions {
+            position: absolute;
+            left: 80%;
+            top: 10%;
+        }
+
+            .battalions a {
+                margin-bottom: 20px;
+            }
+
+        /*Navigation link position placement*/
+        .links {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            width: 15%;
+            border: 1px solid rgba(21, 21, 150, 0.30);
+            padding: 10px;
+            padding-bottom: 0;
+            background: rgba(21, 21, 150, 0.30);
+            border-radius: 5px;
+        }
+
+            /*Navigation link settings and layout*/
+            .links a {
+                display: block;
+                border-top: 3px solid #D7BD7B;
+                border-right: 2px outset #BDBDBD;
+                border-bottom: 3px solid #D7BD7B;
+                border-left: 2px inset #BDBDBD;
+                border-radius: 5px;
+                padding: 5px;
+                margin-bottom: 10px;
+                text-align: center;
+                color: #2121d9;
+                text-decoration: none;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc5OTAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiNEMEE3MDIiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNEN0JEN0IiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0JEQkRCRCIgb2Zmc2V0PSIwLjc1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0Q3QkQ3QiIgb2Zmc2V0PSIwLjg3NSIvPjxzdG9wIHN0b3AtY29sb3I9IiNEMEE3MDIiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2c5OTApIiAvPgo8L3N2Zz4=);
+            }
+
+                /*Navigation link hover effects*/
+                .links a:hover {
+                    opacity: .95;
+                    -ms-transform: scale(.95);
+                    border-top: 3px solid #735C01;
+                    border-right: 2px inset #8F8F8F;
+                    border-bottom: 3px solid #735C01;
+                    border-left: 2px outset #8F8F8F;
+                    color: #ffd800;
+                    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImczMTMiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3MzVDMDEiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiNCNTlGNjgiIG9mZnNldD0iMC41Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzhGOEY4RiIgb2Zmc2V0PSIwLjc1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0I1OUY2OCIgb2Zmc2V0PSIwLjg3NSIvPjxzdG9wIHN0b3AtY29sb3I9IiM3MzVDMDEiIG9mZnNldD0iMSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2czMTMpIiAvPgo8L3N2Zz4=);
+                }
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>128th Aviation Brigade</h1>
+
+    <!--Displays link and logo to 128th AB Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab">
+            <img src="128th logo.png" alt="128th Aviation Brigade" title="Visit 128th Aviation Brigade Portal" />
+            <div>128th<br />Aviation<br />Brigade</div>
+        </a>
+    </div>
+
+    <!--Displays links and logos to 1-210th, 1-222nd, and 2-210th Regiment Homepages-->
+    <div class="battalions">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1210th/Pages/default.aspx">
+            <img src="1-210th Logo.png" title="Visit 1-210th Aviation Regiment Portal" />
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/Pages/default.aspx">
+            <img src="1-222nd Logo.png" title="Visit 1-222nd Aviation Regiment Portal" onmouseover="this.src = '1-222nd Hover Logo.gif';" onmouseout="this.src='1-222nd Logo.png';" />
+        </a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_2210th/Pages/default.aspx">
+            <img src="2-210th Logo.png" title="Visit 2-210th Aviation Regiment Portal" />
+        </a>
+    </div>
+
+    <!--Naviagation links to 128th AB Homepage-->
+    <div class="links">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/128th%20SOP/Forms/AllItems.aspx">128th SOP</a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Comman%20%20Staff%20Slides/Forms/AllItems.aspx">Command & Staff Slides</a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Accreditation%20Slides/Forms/AllItems.aspx">Accreditation Slides</a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Lists/Problem%20Reporting/AllItems.aspx">Service Desk Request</a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Lists/128th%20AVN%20BDE%20PoliciesSOP%20Links/AllItems.aspx">Policies/SOP links</a>
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Lists/128th%20Links/AllItems.aspx">Links</a>
+    </div>
+</body>
+</html>

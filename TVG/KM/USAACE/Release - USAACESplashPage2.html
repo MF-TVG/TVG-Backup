@@ -1,0 +1,239 @@
+﻿<!--
+******************************************
+**          USAACE Splash Page          **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>USAACE Splash Page</title>
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('usaace.jpg') no-repeat center;
+            background-size: cover;
+            font-family: Verdana;
+            line-height: 100%;
+        }
+
+        h1 {
+            position: absolute;
+            left: 15%;
+            margin-top: 0;
+            width: 70%;
+            height: 10%;
+            color: white;
+            border: 1px solid white;
+            background-color: black;
+            text-align: center;
+            border-radius: 0 0 5px 5px;
+        }
+
+            h1 span {
+                position: absolute;
+                top: 35%;
+                left: 9%;
+                font-size: 75%;
+            }
+
+        /*Page wide image settings*/
+        img {
+            border: none;
+            height: 50%;
+            margin-top: 10%;
+        }
+
+        .content {
+            position: absolute;
+            left: 28%;
+            top: 11%;
+            width: 44%;
+            height: 84%;
+        }
+
+            .content table {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+
+                .content table tr {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                    .content table tr td {
+                        width: 33%;
+                        height: 33%;
+                        border: 3px solid #9a9a9a;
+                    }
+
+                        .content table tr td a {
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
+                            color: #9a9a9a;
+                            text-decoration: none;
+                            text-align: center;
+                        }
+
+                        .content table tr td:hover, .content table tr td a:hover {
+                            border-color: #fabe2a;
+                            color: #fabe2a;
+                            -ms-transform: scale(0.95);
+                        }
+
+                            .content table tr td a div {
+                                margin-top: 20%;
+                                font-weight: bold;
+                            }
+
+                                .content table tr td a .singleLine {
+                                    margin-top: 40%;
+                                }
+
+        .links {
+            position: absolute;
+            top: 68%;
+            left: 75%;
+            width: 18%;
+            height: 26%;
+        }
+
+            .links ul {
+                width: 100%;
+                height: 100%;
+                list-style: none;
+                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjAiLz4KICAgIDxzdG9wIG9mZnNldD0iMjclIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjAuMjciLz4KICAgIDxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjN2RiOWU4IiBzdG9wLW9wYWNpdHk9IjAuNSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNTViMGUzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+                border-radius: 10px;
+                padding: 1%;
+                
+            }
+
+                .links ul li {
+                    margin-left: 20%;
+                    margin-bottom: 1%;
+                }
+
+                    .links ul li a {
+                        text-decoration: none;
+                        color: #ffffff;
+                    }
+
+                        .links ul li a:hover {
+                            color: #000000;
+                        }
+    </style>
+    
+</head>
+<body>
+    <!--Page Header-->
+    <h1><span>USAACE - United States Army Aviation Center of Excellence</span></h1>
+
+    <div class="content">
+        <table>
+            <tr>
+                <td style="border-radius: 5px 5px 0 5px; border-width: 4px 1px 1px 4px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/SitePages/Dashboard.aspx">
+                        <div class="singleLine">My Dashboard</div>
+                    </a>
+                </td>
+                <td style="border-radius: 5px 5px 0 0; border-width: 4px 1px 4px 1px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/SitePages/Home.aspx">
+                        <div>USAACE</div>
+                        <img src="USAACE - Logo.png" alt="USAACE" title="Visit USAACE Portal" />
+                    </a>
+                </td>
+                <td style="border-radius: 5px 5px 5px 0; border-width: 4px 4px 1px 1px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/CGTasker">
+                        <div class="singleLine">CG Tasker</div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-radius: 5px 0 0 5px; border-width: 1px 4px 1px 4px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/CDIDDash/SiteAssets/Dashboard.aspx">
+                        <div class="singleLine">CDID</div>
+                    </a>
+                </td>
+                <td style="border-color: transparent;"><!--Blank center content--></td>
+                <td style="border-radius: 0 5px 5px 0; border-width: 1px 4px 1px 4px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/g1g4">
+                        <div class="singleLine">G1/G4</div>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td style="border-radius: 5px 0 5px 5px; border-width: 1px 1px 4px 4px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/1ab">
+                        <div>1AB</div>
+                        <img src="1AB Revised.png" title="Visit 1AB Portal" />
+                    </a>
+                </td>
+                <td style="border-radius: 0 0 5px 5px; border-width: 4px 1px 4px 1px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/110thab">
+                        <div>110th AB</div>
+                        <img src="110th Logo.png" title="Visit 110th AB Portal" />
+                    </a>
+                </td>
+                <td style="border-radius: 0 5px 5px 5px; border-width: 1px 4px 4px 1px;">
+                    <a href="https://usaace-vwe.rucker.army.mil/sites/128thab">
+                        <div>128th AB</div>
+                        <img src="128th Logo.png" title="Visit 128th AB Portal" />
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Displays Navigation link panel on USAACE Homepage-->
+    <div class="links">
+        <ul>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/AvCPT">AvCPT</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe-tasker.rucker.army.mil/sites/AMO">AMO</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/eStaffing">eStaffing</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/g3tasker">G3 Tasker</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/g1g4sms">SMS</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/sdts">G6 Service Desk</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/exsum">Exsum</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/acop">ACOP</a>
+            </li>
+            <li>
+                <a href="https://usaace-vwe.rucker.army.mil/sites/KnowledgeMap/">Knowledge Map</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

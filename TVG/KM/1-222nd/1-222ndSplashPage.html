@@ -1,0 +1,263 @@
+﻿<!--
+******************************************
+**          1-222nd splash page         **
+**                                      **
+**  Created By:     Cesar A. Ortega     **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>1-222nd Splash Page</title>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script> <!-- JQuery optional -->
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('1-222nd background1.png') no-repeat fixed center;
+            background-size: cover;
+        }
+
+        /*Page wide image settings*/
+        img {
+           text-decoration:none;
+           border:0;
+        }
+
+        /*Page header settings*/
+        h1 { 
+            position: absolute;
+            background-color:darkblue;
+            border:10px solid darkgray;
+            border-radius:40px;
+            top: 0;
+            left: 25%;
+            width: 50%;
+            text-align: center;
+            font-size:50px;
+            color:silver;
+             
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+        /*1-222nd link and logo location settings*/
+           .logo {
+            position: absolute;           
+            top: 10%;
+            left: 2%;
+        }
+
+            /*1-222nd link position settings*/
+            .logo a {
+                display: block;
+                text-align: center;
+                font-size:40px;
+                font:bolder;
+                color:white;
+            }
+
+            /* 1-222nd logo settings and layout*/
+            .logo img {
+                width:200px;
+            }
+
+       /* 1-222nd logo hover effects*/
+           .logo a:hover {
+            position: absolute;
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+            }
+
+        /*companies link and logo location settings*/
+           .logo, .companies {
+               
+            filter: shadow(color=#000000,direction=135,strength=5);
+        
+        }
+
+       /*companies link position settings*/
+            .companies a {
+                display: block;
+                text-align: center;
+                font-size:40px;
+                font:bolder;
+                color:silver;
+            }
+
+
+        #alpha {
+           position:absolute;
+            top:15%;
+            right:20%;
+        }
+        #Bravo {
+            position: absolute;
+            top:15%;
+            right:5%;
+        }
+
+        #Charlie {
+            position: absolute;
+            top:35%;
+            right:19%;
+        }
+
+        #Delta {
+            position: absolute;
+            top:35%;
+            right:5%;
+        }
+        #Foxtrot {
+            position: absolute;
+            top:55%;
+            right:19%;
+        }
+
+        #Hotel{
+            position: absolute;
+            top:55%;
+            right:5%;
+        }
+
+
+            /*companies logo settings and layout*/
+            .companies img {
+                height:100px;
+            }
+
+            /*companies logo hover effects*/
+            .companies a:hover{
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+            }
+
+        /*Navigation Link settings*/
+        .links {
+            position: absolute;
+            background-color:gray;
+            top: 85%;
+            left: 5%;
+            padding:0;
+            border: 5px solid darkgray;
+            border-radius:40px;
+        }
+
+        .links1 {
+            position: absolute;
+            background-color:gray;
+            top: 85%;
+            right: 5%;
+            padding:0;
+            border: 5px solid darkgray;
+            border-radius:40px;
+        }
+
+          .links a {                
+                text-align: center;
+                color:silver;                
+                background-color:darkblue;
+                display: inline-block;
+                border: 3px solid darkgray;
+                border-radius:20px;
+                margin: 5px;
+                padding: 5px;
+            }
+
+          .links1 a {                
+                text-align: center; 
+                color:silver;               
+                background-color:darkblue;
+                display: inline-block;
+                border: 3px solid darkgray;
+                border-radius:20px;
+                margin: 5px;
+                padding: 5px;
+            }
+       /*128th logo hover effects*/
+        .links a:hover {           
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+        .links1 a:hover {           
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>1-222nd Battalion/Regiment</h1>
+
+    <!--Displays link and logo to 'name of organization' Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/Pages/default.aspx"><img src="1-222 Aviation Regiment crest.png" title="Visit 1-222nd Portal" /><div>1-222nd</div></a>
+    </div>
+
+    <!--Displays links and logos to 'name of organization' Homepages-->
+    <div class="companies" id="alpha">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_ACo/Pages/default.aspx"><img src="alpha.png" title="Visit Alpha Portal" /><div>Alpha</div></a>
+    </div>
+
+    <div class="companies" id="Bravo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_BCo/Pages/default.aspx"><img src="b1222.png" title="Visit Bravo Portal" /><div>Bravo</div></a>
+    </div>
+
+    <div class="companies" id="Charlie">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_CCo/Pages/default.aspx"><img src="C com 1-222.png" title="Vist Charlie Portal" /><div>Charlie</div></a>
+    </div>
+
+    <div class="companies" id="Delta">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_DCo/Pages/default.aspx"><img src="D Co 1-222.png" title="Visit Delta Portal" /><div>Delta</div></a>
+    </div>
+
+    <div class="companies" id="Foxtrot">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_FCo/Pages/default.aspx"><img src="foxtrotlogo.png" title="Visit Foxtrot Portal" /><div>Foxtrot</div></a>
+    </div>
+
+    <div class="companies" id="Hotel">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/1-222d_HCo/Pages/default.aspx"><img src="hcom1-222.png" title="Visit Hotel Portal" /><div>Hotel</div></a>
+    </div>
+
+
+    <!--Displays Navigation link slider panel on 'name of organization' Homepage-->
+    <div class="links">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/Knowledge%20Management/Pages/default.aspx">Knowledge Management</a>  
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/Lists/Training%20Links/AllItems.aspx">Training List</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/_layouts/viewlsts.aspx?BaseType=1">Libraries</a>
+
+      </div>
+
+    <div class="links1">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/Operation%20Order%20Dropbox/Forms/AllItems.aspx">Operation Order Dropbox</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/BDE_1222d/Lists/1222d%20Calendar/calendar.aspx">Calendar</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/128thab/IMSO/Pages/default.aspx">IMSO</a>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,236 @@
+﻿<!--
+******************************************
+**        1-14th Splash Page            **
+**                                      **
+**  Created By:    Cesar A. Ortega      **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>1-14th Splash Page</title>
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script> <!-- JQuery optional -->
+    <style type="text/css">
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height:100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('1-14thbackground2.png') no-repeat fixed center;
+            background-size: cover;
+        }
+
+        /*Page wide image settings*/
+        img {
+            text-decoration:none;
+            border:0;
+        }
+
+        /*Page header settings*/
+        h1 {
+            position: absolute;
+            background-color:darkblue;
+            border:10px solid silver;
+            border-radius:40px;
+            top: 0;
+            left: 30%;
+            width: 40%;
+            text-align: center;
+            font-size:50px;
+            color:silver;
+        }
+
+        a {
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+        /*1-14th link and logo location settings*/
+        .logo {
+            position: absolute;           
+            top: 15%;
+            left: 39%;
+        }
+
+            /*1-14th link position settings*/
+            .logo a {
+                display: block;
+                text-align: center;
+                font-size:40px;
+                font:bolder;
+                color:silver;
+                
+            }
+
+            /*1-14th logo settings and layout*/
+            .logo img {
+
+                height:300px;
+                
+            }
+
+            /*1-14th logo hover effects*/
+            .logo a:hover {
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+            }
+
+            /*companies link and logo location settings*/
+           .logo, .companies {
+               
+               filter: shadow(color=#000000,direction=135,strength=5);
+        
+        }
+
+        /*companies link and logo location settings*/
+           #alpha {
+               position: absolute;
+               top:10%;
+               right:5%;
+        }
+
+          #Charlie{
+              position: absolute;
+              top:40%;
+              right:5%;
+        }
+
+          #Delta {
+              position: absolute;
+              top:70%;
+              right:5%;
+        }
+
+         /*companies link position settings*/
+            .companies a {
+                display: block;
+                text-align: center;
+                font-size:30px;
+                font:bolder;
+                color:silver;
+            }
+
+
+        /*companies logo settings and layout*/
+            .companies img {
+                height:100px;
+            }
+
+        /*companies logo hover effects*/
+          .companies a:hover{
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+            }
+
+       /*Navigation Link settings*/
+        .links {
+            position: absolute;
+            background-color:darkblue;
+            top: 85%;
+            left: 1%;
+            padding: 10px;
+            border: 5px solid silver;
+            border-radius:40px;
+        }
+
+        .links1 {
+            position: absolute;
+            background-color:darkblue;
+            top: 75%;
+            left: 1%;
+            padding: 10px;
+            border: 5px solid silver;
+            border-radius:40px;
+        }
+
+          .links a {                
+                text-align: center;
+                color:silver;     
+                background-color:darkred;
+                display: inline-block;
+                border: 3px solid silver;
+                border-radius:20px;
+                margin:0;
+                padding: 5px;
+            }
+
+          .links1 a {                
+                text-align: center;
+                color:silver;                
+                background-color:darkred;
+                display: inline-block;
+                border: 3px solid silver;
+                border-radius:20px;
+                margin: 0;
+                padding: 5px;
+            }
+
+       /*links hover effects*/
+         .links a:hover {           
+             -ms-transform: scale(0.9);
+             opacity: 0.8;
+        }
+
+        .links1 a:hover {           
+            -ms-transform: scale(0.9);
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>1-14th Battalion/Regiment</h1>
+
+    <!--Displays link and logo to 1-14th Homepage-->
+    <div class="logo">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/Pages/default.aspx"><img src="1-14th Logo.png" title="1-14th Portal" /><div>1-14th</div></a>
+    </div>
+
+    <!--Displays links and logos to companies Homepages-->
+    <div class="companies" id="alpha">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/A_1-14th/Pages/default.aspx"><img src="alpha.png" title="Alpha Portal" /><div>Alpha</div></a>
+    </div>
+
+    <div class="companies" id="Charlie">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/C_1-14th/Pages/default.aspx"><img src="charlie.png" title="Charlie Portal" /><div>Charlie</div></a>
+    </div>
+
+    <div class="companies" id="Delta">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/D_1-14th/Pages/default.aspx"><img src="delta.png" title="Delta Portal" /><div>Delta</div></a>
+    </div>
+    
+    <!--Displays Navigation link slider panel on companies Homepage-->
+    <div class="links">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/KM/Pages/default.aspx">Knowledge Management</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/_layouts/viewlsts.aspx?BaseType=1">Libraries</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/_layouts/viewlsts.aspx?BaseType=0">Lists</a>
+
+    </div>
+
+    <div class="links1">
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/Lists/114th%20Contact%20List/AllItems.aspx">1-14th Contacts</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/Filing%20Cabinet/Forms/AllItems.aspx">Filing Cabinet</a>
+
+        <a href="https://usaace-vwe.rucker.army.mil/sites/110thab/1-14th/BRT/Forms/AllItems.aspx">BRT</a>
+
+
+    </div>
+</body>
+</html>

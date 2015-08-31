@@ -1,0 +1,448 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        html {
+            min-width: 1540px;
+        }
+
+        .tree ul {
+            padding-top: 20px;
+            position: relative;
+        }
+
+        .tree li {
+            float: left;
+            text-align: center;
+            list-style-type: none;
+            position: relative;
+            padding: 20px 5px 0 5px;
+        }
+
+            /*We will use ::before and ::after to draw the connectors*/
+
+            .tree li::before, .tree li::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 50%;
+                border-top: 1px solid #ccc;
+                width: 50%;
+                height: 20px;
+            }
+
+            .tree li::after {
+                right: auto;
+                left: 50%;
+                border-left: 1px solid #ccc;
+            }
+
+            /*We need to remove left-right connectors from elements without any siblings*/
+            .tree li:only-child::after, .tree li:only-child::before {
+                display: none;
+            }
+
+            /*Remove space from the top of single children*/
+            .tree li:only-child {
+                padding-top: 0;
+            }
+
+            /*Remove left connector from first child and right connector from last child*/
+            .tree li:first-child::before, .tree li:last-child::after {
+                border: 0 none;
+            }
+            /*Adding back the vertical connector to the last nodes*/
+            .tree li:last-child::before {
+                border-right: 1px solid #ccc;
+                border-radius: 0 5px 0 0;
+            }
+
+            .tree li:first-child::after {
+                border-radius: 5px 0 0 0;
+            }
+
+        /*Time to add downward connectors from parents*/
+        .tree ul ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+            width: 0;
+            height: 20px;
+        }
+
+        .tree li a {
+            border: 1px solid #ccc;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #666;
+            font-family: arial, verdana, tahoma;
+            font-size: 11px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+            /*Time for some hover effects*/
+            /*We will apply the hover effect the the lineage of the element also*/
+            .tree li a:hover, .tree li a:hover + ul li a {
+                background: #c8e4f8;
+                color: #000;
+                border: 1px solid #94a0b4;
+            }
+                /*Connector styles on hover*/
+                .tree li a:hover + ul li::after,
+                .tree li a:hover + ul li::before,
+                .tree li a:hover + ul::before,
+                .tree li a:hover + ul ul::before {
+                    border-color: #94a0b4;
+                }
+    </style>
+    <style>
+        #child0 {
+            width: 345px;
+            margin-left: -90px;
+        }
+
+            #child0 ul::before, #child0 ul::after {
+                margin-top: -14px;
+                margin-left: -153px;
+                width: 80px;
+                height: 226px;
+                border-radius: 5px 0 0 0;
+            }
+
+            #child0 ul li::before, #child0 ul li::after {
+                top: 32px;
+                left: -20px;
+                border-width: 1px 0 0 0;
+                width: 25px;
+                border-radius: 0;
+            }
+
+            #child0 ul a {
+                width: 180px;
+            }
+
+        #child1 {
+            width: 427px;
+            margin-left: -50px;
+            height: 900px;
+        }
+
+            #child1 ul::before, #child1 ul::after {
+                padding-top: 240px;
+                margin-left: -100px;
+            }
+
+            #child1 ul ul::before, #child1 ul ul::after {
+                margin-top: -14px;
+                margin-left: -155px;
+                border-radius: 5px 0 0 0;
+            }
+
+        #child1-0 ul::before, #child1-0 ul::after {
+            width: 96px;
+            height: 355px;
+        }
+
+        #child1-1 ul::before, #child1-1 ul::after {
+            width: 86px;
+            height: 195px;
+        }
+
+        #child1-2 ul::before, #child1-2 ul::after {
+            width: 97px;
+            height: 227px;
+        }
+
+        #child1 ul ul li::before, #child1 ul ul li::after {
+            top: 32px;
+            left: -6px;
+            border-width: 1px 0 0 0;
+            width: 12px;
+            border-radius: 0;
+        }
+
+        #child1-0 {
+            top: 240px;
+            left: -360px;
+        }
+
+        #child1-1 {
+            top: -411px;
+            left: -120px;
+        }
+
+            #child1-0 ul, #child1-1 ul, #child1-2 ul {
+                padding-right: 140px;
+            }
+
+
+        #child1-2 {
+            top: -902px;
+            right: -130px;
+        }
+
+
+            #child1-0 ul a, #child1-1 ul a, #child1-2 ul a {
+                width: 150px;
+            }
+
+        #child2 {
+            width: 452px;
+            margin-left: -40px;
+        }
+
+            #child2 ul::before, #child2 ul::after {
+                padding-top: 30px;
+            }
+
+        #child2-0 {
+            top: 10px;
+            left: -300px;
+        }
+
+        #child2-1 {
+            top: -5px;
+            left: -110px;
+        }
+
+            #child2-1::before, #child2-1::after {
+                top: -30px;
+                padding-top: 30px;
+            }
+
+            #child2-1 ul {
+                width: 380px;
+                margin-left: -140px;
+            }
+
+                #child2-1 ul a {
+                    width: 150px;
+                }
+
+                #child2-1 ul::before, #child2-1 ul::after {
+                    padding-top: 0;
+                }
+
+        #child2-2 {
+            top: 10px;
+            left: -20px;
+        }
+
+            #child2-2::before, #child2-2::after {
+                padding-top: 167px;
+                top: -167px;
+                width: 100px;
+            }
+
+            #child2-2 ul a {
+                width: 180px;
+            }
+
+
+            #child2-2 ul::before, #child2-2 ul::after, #child2-3 ul::before, #child2-3::after {
+                margin-top: -14px;
+                margin-left: -170px;
+                border-radius: 5px 0 0 0;
+            }
+
+            #child2-2 ul::before, #child2-2 ul::after {
+                width: 80px;
+                height: 252px;
+            }
+
+        #child2-3 ul::before, #child2-3 ul::after {
+            width: 93px;
+            height: 298px;
+        }
+
+        #child2-2 ul li::before, #child2-2 ul li::after, #child2-3 ul li::before, #child2-3 ul li::after {
+            top: 32px;
+            left: -8px;
+            border-width: 1px 0 0 0;
+            width: 14px;
+            border-radius: 0;
+        }
+
+        #child2-3 {
+            top: 20px;
+            right: -130px;
+        }
+
+            #child2-3::before, #child2-3::after {
+                top: -503px;
+                padding-top: 503px;
+            }
+
+            #child2-3 ul a {
+                width: 150px;
+            }
+
+        #child3 {
+            width: 386px;
+        }
+
+
+
+            #child3 ul::before, #child3 ul::after {
+                margin-top: -14px;
+                margin-left: -170px;
+                border-radius: 5px 0 0 0;
+                width: 102px;
+                height: 735px;
+            }
+
+
+            #child3 ul li::before, #child3 ul li::after {
+                top: 32px;
+                left: -16px;
+                border-width: 1px 0 0 0;
+                width: 22px;
+                border-radius: 0;
+            }
+
+            #child3 ul a {
+                width: 240px;
+            }
+
+        #parent {
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="tree">
+        <ul class="first">
+            <!--Top Level-->
+            <li id="parent">
+                <a href="/Slides/Binder1.2.3.pdf">USAACE Knowledge Map</a>
+                <ul class="second">
+
+                    <!--First First Level-->
+                    <li id="child0">
+                        <a>Organizational Diagrams</a>
+                        <ul>
+                            <li id="child0-0"><a href="/Slides/KnowledgeMapSlide 4.pdf">HQDA, TRADOC, IMCOM Relationship</a></li>
+                            <li id="child0-1"><a href="/Slides/KnowledgeMapSlide 5.pdf">Standard Garrison Organization</a></li>
+                            <li id="child0-2"><a href="/Slides/KnowledgeMapSlide 6.pdf">US Army Aviation Center of Excellence and Fort Rucker</a></li>
+                            <li id="child0-3"><a href="/Slides/KnowledgeMapSlide 7.pdf">USAACE Command Group</a></li>
+                        </ul>
+                    </li>
+
+                    <!--Second First Level-->
+                    <li id="child1">
+                        <a>US Army Aviation Center of Excellence (USAACE)</a>
+                        <ul>
+
+                            <li id="child1-0">
+                                <a>Support Operations</a>
+                                <ul>
+                                    <li id="child1-0-0"><a href="/Slides/KnowledgeMapSlide 8.pdf">USAACE Chief of Staff</a></li>
+                                    <li id="child1-0-1"><a href="/Slides/KnowledgeMapSlide 9.pdf">Aviation Branch Safety Office (ABSO)</a></li>
+                                    <li id="child1-0-2"><a href="/Slides/KnowledgeMapSlide 10.pdf">Chief Information Officer (CIO / G6)</a></li>
+                                    <li id="child1-0-3"><a href="/Slides/KnowledgeMapSlide 18.pdf">G-3 Proponency</a></li>
+                                    <li id="child1-0-4"><a href="/Slides/Binder11.88.pdf">Consolidated Legal Office/SJA (CLO)</a></li>
+                                    <li id="child1-0-5"><a href="/Slides/KnowledgeMapSlide 12.pdf">G8</a></li>
+                                    <li id="child1-0-6"><a href="/Slides/Binder13.14.pdf">G1/G4</a></li>
+                                    <li id="child1-0-7"><a href="/Slides/Binder15.16.pdf">G3 Training</a></li>
+                                    <li id="child1-0-8"><a href="/Slides/KnowledgeMapSlide 17.pdf">G33/35</a></li>
+                                    <li id="child1-0-9"><a href="/Slides/KnowledgeMapSlide 19.pdf">Inspector General</a></li>
+
+                                    <li id="child1-0-10"><a href="/Slides/KnowledgeMapSlide 20.pdf">Protocol Executive Services</a></li>
+                                    <li id="child1-0-11"><a href="/Slides/KnowledgeMapSlide 21.pdf">Quality Assurance Office (QAO)</a></li>
+                                </ul>
+                            </li>
+                            <li id="child1-1">
+                                <a>Futures and Integration</a>
+                                <ul>
+                                    <li id="child1-1-0"><a href="/Slides/Binder22.23.pdf">Capabilities Development and Integration Directorate (CDID)</a></li>
+                                    <li id="child1-1-1"><a href="/Slides/KnowledgeMapSlide 24.pdf" title="This can easily be moved" style="background-color: rgba(255, 0, 0, 0.25)">Career Program 64 (CP-64) Aviation</a></li>
+                                    <li id="child1-1-2"><a href="/Slides/Binder25.26.pdf">Concepts and Requirements Directorate (CRD)</a></li>
+                                    <li id="child1-1-3"><a href="/Slides/Binder27.28.pdf">Organization & Personnel Force Development Directorate</a></li>
+                                    <li id="child1-1-4"><a href="/Slides/KnowledgeMapSlide 29.pdf">TRADOC Capabilities Manager / Lift (TCM-L)</a></li>
+                                    <li id="child1-1-5"><a href="/Slides/KnowledgeMapSlide 30.pdf">TRADOC Capabilities Manager / Recon / Attack (TCM-R/A)</a></li>
+                                    <li id="child1-1-6"><a href="/Slides/KnowledgeMapSlide 31.pdf">TRADOC Capabilities Manager / UAS (TCM-UAS)</a></li>
+                                </ul>
+                            </li>
+                            <li id="child1-2">
+                                <a>Current Operations</a>
+                                <ul>
+                                    <li id="child1-2-0"><a href="/Slides/KnowledgeMapSlide 32.pdf">1st Aviation Brigade (1AB)</a></li>
+                                    <li id="child1-2-1"><a href="/Slides/Binder33.34.35.36.37.38.39.pdf">110th Aviation Brigade (110AB)</a></li>
+                                    <li id="child1-2-2"><a href="/Slides/Binder40.41.pdf">128th Aviation Brigade (128AB)</a></li>
+                                    <li id="child1-2-3"><a href="/Slides/KnowledgeMapSlide 42.pdf">Deputy Assistant Commandant USAR and ARNG</a></li>
+                                    <li id="child1-2-4"><a href="/Slides/KnowledgeMapSlide 43.pdf, 44.pdf">Directorate of Evaluation and Standards (DES)</a></li>
+                                    <li id="child1-2-5"><a href="/Slides/KnowledgeMapSlide 45.pdf">Directorate of Simulation (DOS)</a></li>
+                                    <li id="child1-2-6"><a href="/Slides/Binder46.47.48.pdf">Directorate of Training & Doctrine (DOTD)</a></li>
+                                    <li id="child1-2-7"><a href="/Slides/Binder49.50.pdf">Non-Commissioned Officer's Academy (NCOA)</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Third First Level-->
+                    <li id="child2">
+                        <a href="/Slides/Binder51.53.pdf">US Army Garrison - Fort Rucker (IMCOM)</a>
+                        <ul>
+                            <li id="child2-0"><a href="/Slides/KnowledgeMapSlide 52.pdf">Garrison Command Headquarters (GC)</a></li>
+                            <li id="child2-1">
+                                <a>Management and Control Offices</a>
+                                <ul>
+                                    <li id="child2-1-0"><a href="/Slides/KnowledgeMapSlide 54.pdf">Plans, Analysis, and Integration Office (PAIO)</a></li>
+                                    <li id="child2-1-1"><a href="/Slides/KnowledgeMapSlide 55.pdf">Garrison Resource Management Office (GRMO)</a></li>
+                                </ul>
+                            </li>
+                            <li id="child2-2">
+                                <a>Installation Support Directorates</a>
+                                <ul>
+                                    <li id="child2-2-0"><a href="/Slides/Binder56.57.pdf">Directorate of Family Morale, Welfare and Recreation (DFMWR)</a></li>
+                                    <li id="child2-2-1"><a href="/Slides/KnowledgeMapSlide 58.pdf">Directorate of Human Resources (DHR)</a></li>
+                                    <li id="child2-2-2"><a href="/Slides/KnowledgeMapSlide 59.pdf">Directorate of Plans, Training, Mobilization and Security (DPTMS)</a></li>
+                                    <li id="child2-2-3"><a href="/Slides/Binder60.61.pdf">Directorate of Public Safety (DPS)</a></li>
+                                    <li id="child2-2-4"><a href="/Slides/KnowledgeMapSlide 62.pdf">Directorate of Public Works (DPW)</a></li>
+                                </ul>
+                            </li>
+                            <li id="child2-3">
+                                <a>Installation Support Offices</a>
+                                <ul>
+                                    <li id="child2-3-0"><a href="/Slides/KnowledgeMapSlide 63.pdf">Equal Employment Opportunity Office (EEO)</a></li>
+                                    <li id="child2-3-1"><a href="/Slides/KnowledgeMapSlide 64.pdf">Internal Review and Audit Compliance Office (IRACO)</a></li>
+                                    <li id="child2-3-2"><a href="/Slides/KnowledgeMapSlide 65.pdf">Installation Safety Office (ISO)</a></li>
+                                    <li id="child2-3-3"><a href="/Slides/KnowledgeMapSlide 66.pdf">Public Affairs Office (PAO)</a></li>
+                                    <li id="child2-3-4"><a href="/Slides/KnowledgeMapSlide 67.pdf">Religious Support Office (RSO)</a></li>
+                                    <li id="child2-3-5"><a href="/Slides/KnowledgeMapSlide 87.pdf" title="This can easily be moved" style="background-color: rgba(255, 0, 0, 0.25)">SHARP</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!--Fourth First Level-->
+                    <li id="child3">
+                        <a>Tenant Units / Activities</a>
+                        <ul>
+                            <li id="child3-0"><a href="/Slides/KnowledgeMapSlide 68.pdf">164th Theater Airfield Operations Group (164th TAOG) (FORSCOM)</a></li>
+                            <li id="child3-1"><a href="/Slides/Binder69.70.pdf">Air Traffic Services Command (ATSCOM)</a></li>
+                            <li id="child3-2"><a href="/Slides/Binder71.72.73.74.89.pdf">Aviation Center Logistics Command (ACLC) (AMC)</a></li>
+                            <li id="child3-3"><a href="/Slides/KnowledgeMapSlide 75.pdf">Civilian Personnel Advisory Center (CPAC) (CHRA)</a></li>
+                            <li id="child3-4"><a href="/Slides/KnowledgeMapSlide 76.pdf">Defense Military Pay Office (DMPO)</a></li>
+                            <li id="child3-5"><a href="/Slides/KnowledgeMapSlide 77.pdf">Logistics Readiness Center (LRC)</a></li>
+                            <li id="child3-6"><a href="/Slides/KnowledgeMapSlide 78.pdf">Medical Evacuation Proponency Directorate (MEPD)</a></li>
+                            <li id="child3-7"><a href="/Slides/KnowledgeMapSlide 79.pdf">Mission and Installation Contracting Command (MICC) (AMC)</a></li>
+                            <li id="child3-8"><a href="/Slides/KnowledgeMapSlide 80.pdf">Network Enterprise Center (NEC) (NETCOM)</a></li>
+                            <li id="child3-9"><a href="/Slides/KnowledgeMapSlide 81.pdf">US Army Aviation Research Laboratory (USAARL)</a></li>
+                            <li id="child3-10"><a href="/Slides/Binder82.83.pdf">US Army Combat Readiness Center (CRC) / Safety Center (HQDA)</a></li>
+                            <li id="child3-11"><a href="/Slides/KnowledgeMapSlide 84.pdf">US Army Dental Clinic Command (AMEDD)</a></li>
+                            <li id="child3-12"><a href="/Slides/KnowledgeMapSlide 85.pdf">US Army School of Aviation Medicine (USASAM)</a></li>
+                            <li id="child3-13"><a href="/Slides/KnowledgeMapSlide 86.pdf">US Army Warrant Officer Career College (USAWOCC)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

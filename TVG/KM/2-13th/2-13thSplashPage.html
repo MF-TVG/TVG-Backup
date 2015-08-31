@@ -1,0 +1,164 @@
+﻿<!--
+******************************************
+**        2nd Aviation Battalion        **
+**       13th Regiment Splash Page      **
+**                                      **
+**  Created By:     Marcus Faye         **
+**              Application Developer   **
+**                   Contractor         **
+**               The Ventura Group      **
+**                Fort Rucker, AL       **
+******************************************
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Use Internet Explorer 9 Standards mode -->
+    <meta http-equiv="x-ua-compatible" content="IE=9" />
+    <title>2nd Aviation Battalion 13th Regiment Splash Page</title>
+    <link rel="stylesheet" type="text/css" href="2-13thSplashPage.css" />
+    <style type="text/css">
+
+        /*Mainpage settings*/
+        body, html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*Mainpage background settings*/
+        body {
+            background: url('2-13thBackground.png') no-repeat center fixed;
+            background-size: cover;
+            font-family: Verdana;
+        }
+
+        /*Page header settings*/
+        h1 {
+            position: absolute;
+            width: 50%;
+            left: 25%;
+            top: 5%;
+            text-align: center;
+            font-size: 40px;
+            color: #f3ae00;
+            filter: shadow(color=#444444, direction=135, strength=5) dropshadow(color=#000000, direction=135, strength=10);
+        }
+
+        /*Page wide image settings*/
+        img {
+            border: 0;
+            width: 200px;
+        }
+
+        /*Regiment link and logo location settings*/
+        .logo {
+            position: absolute;
+            left: 10%;
+            top: 10%;
+        }
+
+            /*Regiment link position settings*/
+            .logo a, .companies a, .links a {
+                display: block;
+                color: #275c93;
+                font-weight: bolder;
+                font-size: 25px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            /*Regiment logo hover effects*/
+            .logo a:hover, .companies a:hover, .links a:hover {
+                opacity: 0.8;
+                color: #f3ae00;
+                -ms-transform: scale(0.9);
+            }
+
+        /*Company link and logo location settings*/
+        .companies {
+            position: absolute;
+            top: 5%;
+            left: 85%;
+        }
+
+            .companies a {
+                margin-bottom: 10px;
+            }
+
+
+            .companies img {
+                width: 100px;
+            }
+
+        /*Navigation link position placement*/
+        .links {
+            position: absolute;
+            top: 55%;
+            left: 10%;
+            width: 220px;
+        }
+
+            /*Navigation link settings and layout*/
+            .links a {
+                background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImcyNTkiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM3QzgxQzIiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM1NzUwQzIiIG9mZnNldD0iLjA1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0YwRDlGRiIgb2Zmc2V0PSIuMSIvPjxzdG9wIHN0b3AtY29sb3I9IiM1QzY3RkYiIG9mZnNldD0iLjM1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwMTFGRiIgb2Zmc2V0PSIuNSIvPjxzdG9wIHN0b3AtY29sb3I9IiM1QzY3RkYiIG9mZnNldD0iMC45Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzlDQTJGRiIgb2Zmc2V0PSIuOTUiLz48c3RvcCBzdG9wLWNvbG9yPSIjMEEwQUZGIiBvZmZzZXQ9IjEiLz4KPC9saW5lYXJHcmFkaWVudD4KPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNnMjU5KSIgLz4KPC9zdmc+);
+                border-radius: 5px;
+                border: solid #5991FF;
+                padding: 10px;
+                color: #f3ae00;
+                margin-bottom: 10px;
+            }
+
+            /*Navigation link hover effects*/
+            .links a:hover {
+                background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgo8bGluZWFyR3JhZGllbnQgaWQ9Imc3MTYiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+CjxzdG9wIHN0b3AtY29sb3I9IiM2MTkyQzIiIG9mZnNldD0iMCIvPjxzdG9wIHN0b3AtY29sb3I9IiM5RkEzQzIiIG9mZnNldD0iLjEiLz48c3RvcCBzdG9wLWNvbG9yPSIjRDFEN0ZGIiBvZmZzZXQ9Ii4xNSIvPjxzdG9wIHN0b3AtY29sb3I9IiNCMERBRkYiIG9mZnNldD0iLjQ1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iI0E2QzFGRiIgb2Zmc2V0PSIuNjUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRUJFRUZGIiBvZmZzZXQ9Ii42OSIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkVCRkYiIG9mZnNldD0iLjciLz48c3RvcCBzdG9wLWNvbG9yPSIjRUJFRUZGIiBvZmZzZXQ9Ii43MyIvPjxzdG9wIHN0b3AtY29sb3I9IiNFNkVCRkYiIG9mZnNldD0iLjc1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzhDQzlGRiIgb2Zmc2V0PSIuOSIvPjxzdG9wIHN0b3AtY29sb3I9IiM2OUFBRkYiIG9mZnNldD0iLjk1Ii8+PHN0b3Agc3RvcC1jb2xvcj0iIzU5OTFGRiIgb2Zmc2V0PSIxIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZzcxNikiIC8+Cjwvc3ZnPg==);
+                color: #001460;
+                border-color: #5991FF;
+            }
+    </style>
+</head>
+<body>
+    <!--Page Header-->
+    <h1>2nd Aviation Battalion<br/>13th Regiment</h1>
+
+    <!--Displays link and logo to 2-13th Homepage-->
+    <div class="logo"><a href="../Pages/default.aspx">
+        <img src="2-13thLogo.png" alt="2nd Aviation Battalion 13th Regiment" title="Visit 2nd Aviation Battalion 13th Regiment Portal" />
+        <div>2-13th</div>
+        </a>
+    </div>
+
+    <!--Displays links and logos to Alpha, Bravo, Charlie, Delta, and Echo Company Homepages-->
+    <div class="companies">
+        <a href="../A-2-13th/Pages/default.aspx">
+            <img src="alpha.png" title="Visit Alpha Company Portal" />
+        <div>Alpha</div>
+        </a>
+        <a href="../B-2-13th/Pages/default.aspx">
+            <img src="bravo.png" title="Visit Bravo Company Portal" />
+        <div>Bravo</div>
+        </a>
+        <a href="../C-2-13th/Pages/default.aspx">
+            <img src="charlie.png" title="Visit Charlie Company Portal" />
+        <div>Charlie</div>
+        </a>
+        <a href="../D-2-13th/Pages/default.aspx">
+            <img src="delta.png" title="Visit Delta Company Portal" />
+        <div>Delta</div>
+        </a>
+        <a href="../E-2-13th/Pages/default.aspx">
+            <img src="echo.png" title="Visit Echo Company Portal" />
+        <div>Echo</div>
+        </a>
+    </div>
+
+    <!--Naviagation links to 2-13th Homepage-->
+    <div class="links">
+        <a href="../Commanders%20Library/Forms/AllItems.aspx">Commander's Information</a>
+        <a href="../CSMs%20Library/Forms/AllItems.aspx">CSM's Information</a>
+        <a href="../Filing%20Cabinet/Forms/AllItems.aspx">Filing Cabinet </a>
+    </div>
+</body>
+</html>
