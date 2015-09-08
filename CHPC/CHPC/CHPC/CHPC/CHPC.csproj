@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{593D1E27-E457-4EAF-B42B-2BF099D3C5C7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CHPC</RootNamespace>
+    <AssemblyName>CHPC</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubPages\Articles.aspx.cs">
+      <DependentUpon>Articles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\CommunityResourceGuide.aspx.cs">
+      <DependentUpon>CommunityResourceGuide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\EmergencyNumbers.aspx.cs">
+      <DependentUpon>EmergencyNumbers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Emotional.aspx.cs">
+      <DependentUpon>Emotional.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Family.aspx.cs">
+      <DependentUpon>Family.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Newsletter.aspx.cs">
+      <DependentUpon>Newsletter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Physical.aspx.cs">
+      <DependentUpon>Physical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Resources.master.cs">
+      <DependentUpon>Resources.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Social.aspx.cs">
+      <DependentUpon>Social.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubPages\Spiritual.aspx.cs">
+      <DependentUpon>Spiritual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build\pdf.js" />
+    <Content Include="build\pdf.worker.js" />
+    <Content Include="css\Style.css" />
+    <Content Include="Images\CHPC Logo.png" />
+    <Content Include="js\jquery-2.1.4.js" />
+    <Content Include="Scripts\dhtmlxscheduler.js" />
+    <Content Include="Scripts\dhtmlxscheduler_flat.css" />
+    <Content Include="Scripts\dhtmlxscheduler_glossy.css" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_active_links.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_agenda_view.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_all_timed.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_collision.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_container_autoresize.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_cookie.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_editors.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_expand.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_html_templates.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_key_nav.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_layer.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_limit.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_map_view.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_minical.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_monthheight.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_multiselect.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_multisource.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_mvc.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_offline.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_outerdrag.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_pdf.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_quick_info.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_readonly.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_recurring.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_serialize.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_tooltip.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_url.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_wp.js" />
+    <Content Include="Scripts\ext\dhtmlxscheduler_year_view.js" />
+    <Content Include="Scripts\imgs_flat\agenda_bg.gif" />
+    <Content Include="Scripts\imgs_flat\arrow_left.png" />
+    <Content Include="Scripts\imgs_flat\arrow_right.png" />
+    <Content Include="Scripts\imgs_flat\but_repeat.gif" />
+    <Content Include="Scripts\imgs_flat\calendar.gif" />
+    <Content Include="Scripts\imgs_flat\clock.png" />
+    <Content Include="Scripts\imgs_flat\clock_big.gif" />
+    <Content Include="Scripts\imgs_flat\clock_small.gif" />
+    <Content Include="Scripts\imgs_flat\close_icon.png" />
+    <Content Include="Scripts\imgs_flat\collapse_expand_icon.gif" />
+    <Content Include="Scripts\imgs_flat\controls.png" />
+    <Content Include="Scripts\imgs_flat\databg.png" />
+    <Content Include="Scripts\imgs_flat\databg_now.png" />
+    <Content Include="Scripts\imgs_flat\export_ical.png" />
+    <Content Include="Scripts\imgs_flat\export_pdf.png" />
+    <Content Include="Scripts\imgs_flat\resize_dots.png" />
+    <Content Include="Scripts\imgs_flat\resizing.png" />
+    <Content Include="Scripts\imgs\buttons.png" />
+    <Content Include="Scripts\imgs\but_repeat.gif" />
+    <Content Include="Scripts\imgs\calendar.gif" />
+    <Content Include="Scripts\imgs\clock_big.gif" />
+    <Content Include="Scripts\imgs\clock_small.gif" />
+    <Content Include="Scripts\imgs\collapse_expand_icon.gif" />
+    <Content Include="Scripts\imgs\controls.gif" />
+    <Content Include="Scripts\imgs\databg.png" />
+    <Content Include="Scripts\imgs\databg_now.png" />
+    <Content Include="Scripts\imgs\export_ical.png" />
+    <Content Include="Scripts\imgs\export_pdf.png" />
+    <Content Include="Scripts\imgs\icon.png" />
+    <Content Include="Scripts\imgs\images.png" />
+    <Content Include="Scripts\imgs\loading.gif" />
+    <Content Include="Scripts\imgs\resize_dots.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\arrow_left.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\arrow_right.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\but_repeat.gif" />
+    <Content Include="Scripts\imgs_dhx_terrace\calendar.gif" />
+    <Content Include="Scripts\imgs_dhx_terrace\clock_big.gif" />
+    <Content Include="Scripts\imgs_dhx_terrace\clock_small.gif" />
+    <Content Include="Scripts\imgs_dhx_terrace\close_icon.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\collapse_expand_icon.gif" />
+    <Content Include="Scripts\imgs_dhx_terrace\controls.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\databg.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\databg_now.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\export_ical.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\export_pdf.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\resize_dots.png" />
+    <Content Include="Scripts\imgs_dhx_terrace\resizing.png" />
+    <Content Include="Scripts\imgs_glossy\blue_tab.png" />
+    <Content Include="Scripts\imgs_glossy\blue_tab_wide.png" />
+    <Content Include="Scripts\imgs_glossy\buttons.gif" />
+    <Content Include="Scripts\imgs_glossy\but_repeat.gif" />
+    <Content Include="Scripts\imgs_glossy\calendar.gif" />
+    <Content Include="Scripts\imgs_glossy\clock_big.png" />
+    <Content Include="Scripts\imgs_glossy\clock_small.png" />
+    <Content Include="Scripts\imgs_glossy\collapse_expand_icon.gif" />
+    <Content Include="Scripts\imgs_glossy\controlls5.png" />
+    <Content Include="Scripts\imgs_glossy\databg.png" />
+    <Content Include="Scripts\imgs_glossy\databg_now.png" />
+    <Content Include="Scripts\imgs_glossy\event-bg.png" />
+    <Content Include="Scripts\imgs_glossy\export_ical.png" />
+    <Content Include="Scripts\imgs_glossy\export_pdf.png" />
+    <Content Include="Scripts\imgs_glossy\icon.png" />
+    <Content Include="Scripts\imgs_glossy\left-separator.png" />
+    <Content Include="Scripts\imgs_glossy\left-time-bg.png" />
+    <Content Include="Scripts\imgs_glossy\lightbox.png" />
+    <Content Include="Scripts\imgs_glossy\loading.gif" />
+    <Content Include="Scripts\imgs_glossy\move.png" />
+    <Content Include="Scripts\imgs_glossy\multi-days-bg.png" />
+    <Content Include="Scripts\imgs_glossy\second-top-days-bg.png" />
+    <Content Include="Scripts\imgs_glossy\top-days-bg.png" />
+    <Content Include="Scripts\imgs_glossy\top-separator.gif" />
+    <Content Include="Scripts\imgs_glossy\white_tab.png" />
+    <Content Include="Scripts\imgs_glossy\white_tab_wide.png" />
+    <Content Include="Scripts\locale\locale_ar.js" />
+    <Content Include="Scripts\locale\locale_be.js" />
+    <Content Include="Scripts\locale\locale_ca.js" />
+    <Content Include="Scripts\locale\locale_cn.js" />
+    <Content Include="Scripts\locale\locale_cs.js" />
+    <Content Include="Scripts\locale\locale_da.js" />
+    <Content Include="Scripts\locale\locale_de.js" />
+    <Content Include="Scripts\locale\locale_el.js" />
+    <Content Include="Scripts\locale\locale_en.js" />
+    <Content Include="Scripts\locale\locale_es.js" />
+    <Content Include="Scripts\locale\locale_fi.js" />
+    <Content Include="Scripts\locale\locale_fr.js" />
+    <Content Include="Scripts\locale\locale_he.js" />
+    <Content Include="Scripts\locale\locale_hu.js" />
+    <Content Include="Scripts\locale\locale_id.js" />
+    <Content Include="Scripts\locale\locale_it.js" />
+    <Content Include="Scripts\locale\locale_jp.js" />
+    <Content Include="Scripts\locale\locale_nb.js" />
+    <Content Include="Scripts\locale\locale_nl.js" />
+    <Content Include="Scripts\locale\locale_no.js" />
+    <Content Include="Scripts\locale\locale_pl.js" />
+    <Content Include="Scripts\locale\locale_pt.js" />
+    <Content Include="Scripts\locale\locale_ro.js" />
+    <Content Include="Scripts\locale\locale_ru.js" />
+    <Content Include="Scripts\locale\locale_si.js" />
+    <Content Include="Scripts\locale\locale_sk.js" />
+    <Content Include="Scripts\locale\locale_sv.js" />
+    <Content Include="Scripts\locale\locale_tr.js" />
+    <Content Include="Scripts\locale\locale_ua.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_be.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_cn.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_cs.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_da.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_de.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_el.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_en.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_es.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_fi.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_fr.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_it.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_nb.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_nl.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_pl.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_pt.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_ro.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_ru.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_sk.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_sv.js" />
+    <Content Include="Scripts\locale\recurring\locale_recurring_ua.js" />
+    <Content Include="Scripts\locale\recurring\repeat_template_be.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_cn.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_de.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_el.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_en.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_es.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_fr.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_it.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_nl.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_ro.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_ru.html" />
+    <Content Include="Scripts\locale\recurring\repeat_template_sk.html" />
+    <Content Include="SubPages\Articles.aspx" />
+    <Content Include="SubPages\CommunityResourceGuide.aspx" />
+    <Content Include="SubPages\EmergencyNumbers.aspx" />
+    <Content Include="SubPages\Emotional.aspx" />
+    <Content Include="SubPages\Family.aspx" />
+    <Content Include="SubPages\Home.aspx" />
+    <Content Include="SubPages\Newsletter.aspx" />
+    <Content Include="SubPages\Physical.aspx" />
+    <Content Include="SubPages\Social.aspx" />
+    <Content Include="SubPages\Spiritual.aspx" />
+    <Content Include="web\cmaps\annotation-check.svg" />
+    <Content Include="web\cmaps\annotation-comment.svg" />
+    <Content Include="web\cmaps\annotation-help.svg" />
+    <Content Include="web\cmaps\annotation-insert.svg" />
+    <Content Include="web\cmaps\annotation-key.svg" />
+    <Content Include="web\cmaps\annotation-newparagraph.svg" />
+    <Content Include="web\cmaps\annotation-noicon.svg" />
+    <Content Include="web\cmaps\annotation-note.svg" />
+    <Content Include="web\cmaps\annotation-paragraph.svg" />
+    <Content Include="web\cmaps\findbarButton-next%402x.png" />
+    <Content Include="web\cmaps\findbarButton-next-rtl%402x.png" />
+    <Content Include="web\cmaps\findbarButton-next-rtl.png" />
+    <Content Include="web\cmaps\findbarButton-next.png" />
+    <Content Include="web\cmaps\findbarButton-previous%402x.png" />
+    <Content Include="web\cmaps\findbarButton-previous-rtl%402x.png" />
+    <Content Include="web\cmaps\findbarButton-previous-rtl.png" />
+    <Content Include="web\cmaps\findbarButton-previous.png" />
+    <Content Include="web\cmaps\grab.cur" />
+    <Content Include="web\cmaps\grabbing.cur" />
+    <Content Include="web\cmaps\loading-icon.gif" />
+    <Content Include="web\cmaps\loading-small%402x.png" />
+    <Content Include="web\cmaps\loading-small.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-firstPage.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-handTool.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-lastPage.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="web\cmaps\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="web\cmaps\shadow.png" />
+    <Content Include="web\cmaps\texture.png" />
+    <Content Include="web\cmaps\toolbarButton-bookmark%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-bookmark.png" />
+    <Content Include="web\cmaps\toolbarButton-download%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-download.png" />
+    <Content Include="web\cmaps\toolbarButton-menuArrows%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-menuArrows.png" />
+    <Content Include="web\cmaps\toolbarButton-openFile%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-openFile.png" />
+    <Content Include="web\cmaps\toolbarButton-pageDown%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-pageDown-rtl.png" />
+    <Content Include="web\cmaps\toolbarButton-pageDown.png" />
+    <Content Include="web\cmaps\toolbarButton-pageUp%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-pageUp-rtl.png" />
+    <Content Include="web\cmaps\toolbarButton-pageUp.png" />
+    <Content Include="web\cmaps\toolbarButton-presentationMode%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-presentationMode.png" />
+    <Content Include="web\cmaps\toolbarButton-print%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-print.png" />
+    <Content Include="web\cmaps\toolbarButton-search%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-search.png" />
+    <Content Include="web\cmaps\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="web\cmaps\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="web\cmaps\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="web\cmaps\toolbarButton-sidebarToggle.png" />
+    <Content Include="web\cmaps\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-viewAttachments.png" />
+    <Content Include="web\cmaps\toolbarButton-viewOutline%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="web\cmaps\toolbarButton-viewOutline.png" />
+    <Content Include="web\cmaps\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-viewThumbnail.png" />
+    <Content Include="web\cmaps\toolbarButton-zoomIn%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-zoomIn.png" />
+    <Content Include="web\cmaps\toolbarButton-zoomOut%402x.png" />
+    <Content Include="web\cmaps\toolbarButton-zoomOut.png" />
+    <Content Include="web\compatibility.js" />
+    <Content Include="web\debugger.js" />
+    <Content Include="web\images\annotation-check.svg" />
+    <Content Include="web\images\annotation-comment.svg" />
+    <Content Include="web\images\annotation-help.svg" />
+    <Content Include="web\images\annotation-insert.svg" />
+    <Content Include="web\images\annotation-key.svg" />
+    <Content Include="web\images\annotation-newparagraph.svg" />
+    <Content Include="web\images\annotation-noicon.svg" />
+    <Content Include="web\images\annotation-note.svg" />
+    <Content Include="web\images\annotation-paragraph.svg" />
+    <Content Include="web\images\findbarButton-next%402x.png" />
+    <Content Include="web\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="web\images\findbarButton-next-rtl.png" />
+    <Content Include="web\images\findbarButton-next.png" />
+    <Content Include="web\images\findbarButton-previous%402x.png" />
+    <Content Include="web\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="web\images\findbarButton-previous-rtl.png" />
+    <Content Include="web\images\findbarButton-previous.png" />
+    <Content Include="web\images\grab.cur" />
+    <Content Include="web\images\grabbing.cur" />
+    <Content Include="web\images\loading-icon.gif" />
+    <Content Include="web\images\loading-small%402x.png" />
+    <Content Include="web\images\loading-small.png" />
+    <Content Include="web\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="web\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="web\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="web\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="web\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="web\images\shadow.png" />
+    <Content Include="web\images\texture.png" />
+    <Content Include="web\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="web\images\toolbarButton-bookmark.png" />
+    <Content Include="web\images\toolbarButton-download%402x.png" />
+    <Content Include="web\images\toolbarButton-download.png" />
+    <Content Include="web\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="web\images\toolbarButton-menuArrows.png" />
+    <Content Include="web\images\toolbarButton-openFile%402x.png" />
+    <Content Include="web\images\toolbarButton-openFile.png" />
+    <Content Include="web\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="web\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="web\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="web\images\toolbarButton-pageDown.png" />
+    <Content Include="web\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="web\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="web\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="web\images\toolbarButton-pageUp.png" />
+    <Content Include="web\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="web\images\toolbarButton-presentationMode.png" />
+    <Content Include="web\images\toolbarButton-print%402x.png" />
+    <Content Include="web\images\toolbarButton-print.png" />
+    <Content Include="web\images\toolbarButton-search%402x.png" />
+    <Content Include="web\images\toolbarButton-search.png" />
+    <Content Include="web\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="web\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="web\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="web\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="web\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="web\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="web\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="web\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="web\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="web\images\toolbarButton-viewAttachments.png" />
+    <Content Include="web\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="web\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="web\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="web\images\toolbarButton-viewOutline.png" />
+    <Content Include="web\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="web\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="web\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="web\images\toolbarButton-zoomIn.png" />
+    <Content Include="web\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="web\images\toolbarButton-zoomOut.png" />
+    <Content Include="web\l10n.js" />
+    <Content Include="web\viewer.css" />
+    <Content Include="web\viewer.html" />
+    <Content Include="web\viewer.js" />
+    <Content Include="_SiteLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PDF\newsletter20150303.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SubPages\Calendar.cshtml" />
+    <Content Include="SubPages\Resources.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\compressed.tracemonkey-pldi-09.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\en-US\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\locale.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\ach\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\af\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\ak\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\an\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\ar\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web\locale\as\viewer.properties" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\connector\base_connector.php" />
+    <Content Include="Scripts\connector\chart_connector.php" />
+    <Content Include="Scripts\connector\combo_connector.php" />
+    <Content Include="Scripts\connector\convert.php" />
+    <Content Include="Scripts\connector\crosslink_connector.php" />
+    <Content Include="Scripts\connector\dataprocessor.php" />
+    <Content Include="Scripts\connector\dataview_connector.php" />
+    <Content Include="Scripts\connector\data_connector.php" />
+    <Content Include="Scripts\connector\db_adodb.php" />
+    <Content Include="Scripts\connector\db_common.php" />
+    <Content Include="Scripts\connector\db_excel.php" />
+    <Content Include="Scripts\connector\db_filesystem.php" />
+    <Content Include="Scripts\connector\db_mssql.php" />
+    <Content Include="Scripts\connector\db_mysqli.php" />
+    <Content Include="Scripts\connector\db_oracle.php" />
+    <Content Include="Scripts\connector\db_pdo.php" />
+    <Content Include="Scripts\connector\db_phpcake.php" />
+    <Content Include="Scripts\connector\db_phpci.php" />
+    <Content Include="Scripts\connector\db_phpyii.php" />
+    <Content Include="Scripts\connector\db_postgre.php" />
+    <Content Include="Scripts\connector\db_sasql.php" />
+    <Content Include="Scripts\connector\db_sqlite.php" />
+    <Content Include="Scripts\connector\db_sqlite3.php" />
+    <Content Include="Scripts\connector\db_sqlsrv.php" />
+    <Content Include="Scripts\connector\filesystem_item.php" />
+    <Content Include="Scripts\connector\form_connector.php" />
+    <Content Include="Scripts\connector\gantt_connector.php" />
+    <Content Include="Scripts\connector\grid_config.php" />
+    <Content Include="Scripts\connector\grid_connector.php" />
+    <Content Include="Scripts\connector\keygrid_connector.php" />
+    <Content Include="Scripts\connector\mixed_connector.php" />
+    <Content Include="Scripts\connector\options_connector.php" />
+    <Content Include="Scripts\connector\scheduler_connector.php" />
+    <Content Include="Scripts\connector\strategy.php" />
+    <Content Include="Scripts\connector\tools.php" />
+    <Content Include="Scripts\connector\treedatagroup_connector.php" />
+    <Content Include="Scripts\connector\treedatamultitable_connector.php" />
+    <Content Include="Scripts\connector\treegridgroup_connector.php" />
+    <Content Include="Scripts\connector\treegridmultitable_connector.php" />
+    <Content Include="Scripts\connector\treegrid_connector.php" />
+    <Content Include="Scripts\connector\treegroup_connector.php" />
+    <Content Include="Scripts\connector\treemultitable_connector.php" />
+    <Content Include="Scripts\connector\tree_connector.php" />
+    <Content Include="Scripts\connector\update.php" />
+    <Content Include="Scripts\connector\xss_filter.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\PublishProfiles\CHPC.pubxml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="packages.config" />
+    <Content Include="Default.cshtml" />
+    <None Include="Properties\PublishProfiles\CHPCDemo.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainPages\Calendar.cshtml" />
+    <Content Include="MainPages\Emotional.cshtml" />
+    <Content Include="MainPages\Family.cshtml" />
+    <Content Include="MainPages\NeedHelpNow.cshtml" />
+    <Content Include="MainPages\Physical.cshtml" />
+    <Content Include="MainPages\Resources.cshtml" />
+    <Content Include="MainPages\Social.cshtml" />
+    <Content Include="MainPages\Spiritual.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58265</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57754/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
