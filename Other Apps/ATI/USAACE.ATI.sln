@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.ATI.Presentation", "USAACE.ATI.Presentation\USAACE.ATI.Presentation.csproj", "{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.ATI.Business", "USAACE.ATI.Business\USAACE.ATI.Business.csproj", "{E76A4642-AE38-4E71-ABBE-DE2001158852}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.ATI.Web", "USAACE.ATI.Web\USAACE.ATI.Web.csproj", "{180F85E3-6B19-4411-BCDF-168F21E7DCEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.ATI.Domain", "USAACE.ATI.Domain\USAACE.ATI.Domain.csproj", "{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rucka0011spsdt1:8080/tfs/usaace
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = USAACE.ATI.Presentation\\USAACE.ATI.Presentation.csproj
+		SccProjectName1 = USAACE.ATI.Presentation
+		SccLocalPath1 = USAACE.ATI.Presentation
+		SccProjectUniqueName2 = USAACE.ATI.Business\\USAACE.ATI.Business.csproj
+		SccProjectName2 = USAACE.ATI.Business
+		SccLocalPath2 = USAACE.ATI.Business
+		SccProjectUniqueName3 = USAACE.ATI.Web\\USAACE.ATI.Web.csproj
+		SccProjectName3 = USAACE.ATI.Web
+		SccLocalPath3 = USAACE.ATI.Web
+		SccProjectUniqueName4 = USAACE.ATI.Domain\\USAACE.ATI.Domain.csproj
+		SccProjectName4 = USAACE.ATI.Domain
+		SccLocalPath4 = USAACE.ATI.Domain
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		Prod|Any CPU = Prod|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{9F53B1D5-A90E-49DB-9661-E1F2CC4A9F34}.Test|Any CPU.Build.0 = Test|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{E76A4642-AE38-4E71-ABBE-DE2001158852}.Test|Any CPU.Build.0 = Test|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{180F85E3-6B19-4411-BCDF-168F21E7DCEE}.Test|Any CPU.Build.0 = Test|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Prod|Any CPU.ActiveCfg = Prod|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Prod|Any CPU.Build.0 = Prod|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{B5AA4C32-DF11-4CBA-966D-1AD872F6F851}.Test|Any CPU.Build.0 = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,119 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="USAACE.ATI.Web.Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head runat="server">
+        <title></title>
+        <link href="style/ATI.css" type="text/css" rel="Stylesheet" />
+        <link href="style/ATIPrint.css" type="text/css" rel="Stylesheet" media="print" />
+        <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+    </head>
+    <body>
+        <form id="mainPage" class="page" runat="server">
+            <asp:ScriptManager runat="server" ScriptMode="Release">
+                <Scripts>
+                    <asp:ScriptReference Path="~/js/ATI.js" />
+                </Scripts>
+            </asp:ScriptManager>
+            <div id="header">
+                <div id="headerTop">
+                    <span style="float: left;">
+                        Logged in as: <asp:HyperLink runat="server" ID="lnkUserName" />
+                    </span>
+                    <span style="float: right;"><asp:Literal runat="server" ID="ltrIADTop" /></span>
+                </div>
+                <div id="headerBanner">
+                    <div id="headerBar">
+                        <div id="headerText">
+                            Aviation Training Insight
+                        </div>
+                    </div>
+                    <asp:Image runat="server" ID="imgHeaderFolder" ImageUrl="~/images/logofolder.png" CssClass="headerFolder" />
+                </div>
+            </div>
+            <div id="content">
+                <div id="mainMenu">
+                    <asp:Menu runat="server" ID="mnuMainMenu" Orientation="Vertical" SkipLinkText="" CssClass="menu" StaticEnableDefaultPopOutImage="false">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Pages/Current.aspx" Text="Current Classes" />
+                            <asp:MenuItem NavigateUrl="~/Pages/ProgramDev.aspx" Text="Program Development" />
+                            <asp:MenuItem NavigateUrl="~/Pages/POIDev.aspx" Text="POI Development" />
+                            <asp:MenuItem NavigateUrl="~/Pages/CourseDev.aspx" Text="Course Development" />
+                            <asp:MenuItem NavigateUrl="~/Pages/ClassDev.aspx" Text="Class Development" />
+                            <asp:MenuItem NavigateUrl="~/Pages/Calendar.aspx" Text="Calendar" />
+                            <asp:MenuItem NavigateUrl="~/Pages/HistoricalPercent.aspx" Text="Historical Percents" />
+                            <asp:MenuItem NavigateUrl="~/Pages/ReferenceTables.aspx" Text="Reference Tables" />
+                            <asp:MenuItem NavigateUrl="~/Pages/FlightHours.aspx" Text="Flight Hours" />
+                            <asp:MenuItem NavigateUrl="~/Pages/Reports.aspx" Text="Reports" />
+                        </Items>
+                    </asp:Menu>
+                    <div class="center marginTopSmall">
+                        <asp:HyperLink runat="server" ID="imgLogo" ImageUrl="~/images/usaace.png" NavigateUrl="http://www.rucker.army.mil/" Target="_blank" />
+                    </div>
+                </div>
+                <div id="currentPage">
+                    <asp:UpdatePanel runat="server" ID="updPage" RenderMode="Inline" ChildrenAsTriggers="true" UpdateMode="Conditional">
+                        <ContentTemplate>
+                            <asp:ContentPlaceHolder ID="cphBody" runat="server">
+                            </asp:ContentPlaceHolder>
+                            <ATI:ModalPopup runat="server" ID="mpNotice" CssClass="modalPopup notice" BackgroundCssClass="modalPopupBackground notice">
+                                <div class="top inlineBlock"><asp:Image runat="server" ID="imgNotice" /></div>
+                                <div class="top inlineBlock">
+                                    <div class="modalPopupTitle"><asp:Literal runat="server" ID="ltrNoticeTitle" /></div>
+                                    <div><asp:Literal runat="server" ID="ltrNoticeText" /></div>
+                                    <div class="right marginTop">
+                                        <asp:LinkButton runat="server" ID="btnNoticeOK" CssClass="button ok" Text="OK" OnClick="btnNoticeOK_Click" />
+                                        <asp:HyperLink runat="server" ID="lnkErrorNoticeOK" CssClass="button ok" Text="OK" NavigateUrl="~/Default.aspx" />
+                                    </div>
+                                </div>
+                            </ATI:ModalPopup>
+                            <ATI:ModalPopup runat="server" ID="mpDisclaimer" CssClass="modalPopup notice" BackgroundCssClass="modalPopupBackground notice">
+                                <div class="modalPopupTitle">Disclaimer</div>
+                                <div>
+                                    YOU ARE ACCESSING A U.S. GOVERNMENT (USG) INFORMATION SYSTEM (IS) THAT IS PROVIDED FOR USG-AUTHORIZED USE ONLY.<br /><br />
+                                    By using this IS (which includes any device attached to this IS), you consent to the following conditions:<br />
+                                    <ul>
+                                        <li>
+                                            The USG routinely intercepts and monitors communications on this IS for purposes including, but not limited to, penetration testing,
+                                            COMSEC monitoring, network operations and defense, personnel misconduct (PM), law enforcement (LE), and counterintelligence (CI)
+                                            investigations.
+                                        </li>
+                                        <li>At any time, the USG may inspect and seize data stored on this IS.</li>
+                                        <li>
+                                            Communications using, or data stored on, this IS are not private, are subject to routine monitoring, interception, and search,
+                                            and may be disclosed or used for any USG-authorized purpose.
+                                        </li>
+                                        <li>
+                                            This IS includes security measures (e.g., authentication and access controls) to protect USG interests--not for your personal benefit
+                                            or privacy.
+                                        </li>
+                                        <li>
+                                            Notwithstanding the above, using this IS does not constitute consent to PM, LE or CI investigative searching or monitoring of the
+                                            content of privileged communications, or work product, related to personal representation or services by attorneys, psychotherapists,
+                                            or clergy, and their assistants. Such communications and work product are private and confidential. See User Agreement for details.
+                                        </li>
+                                    </ul>
+                                    By clicking OK, you are accepting these conditions.
+                                </div>
+                                <div class="right marginTop">
+                                    <asp:LinkButton runat="server" ID="btnDisclaimerOK" CssClass="button ok" Text="OK" OnClick="btnDisclaimerOK_Click" />
+                                </div>
+                            </ATI:ModalPopup>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                    <asp:UpdateProgress runat="server" ID="uppPage" AssociatedUpdatePanelID="updPage">
+                        <ProgressTemplate>
+                            <div class="loadingPanelOuter"></div>
+                            <div class="loadingPanel">
+                                <div><asp:Image runat="server" ImageUrl="~/images/loading.gif" AlternateText="Loading" /></div>
+                                Loading ...
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+                </div>
+            </div>
+            <div id="footer">
+                <span style="float: right; margin-top: 0.5em;"><asp:Literal runat="server" ID="ltrIADBottom" /></span>
+            </div>
+        </form>
+    </body>
+</html>
