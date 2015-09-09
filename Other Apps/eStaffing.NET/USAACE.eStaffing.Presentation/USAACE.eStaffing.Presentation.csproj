@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{811207C3-8DE2-449A-A78E-849628C1AEC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USAACE.eStaffing.Presentation</RootNamespace>
+    <AssemblyName>USAACE.eStaffing.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="USAACE.Common">
+      <HintPath>..\..\Architecture.NET\Libraries\Common\4.5.1\USAACE.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Presenters\Controls\FormControls\ReviewerControlPresenter.cs" />
+    <Compile Include="Presenters\Controls\FormControls\FileControl\FileControlPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\Form4610RSheetPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\SchoolsRequestFormPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\Form2028SheetPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\AMOFormPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\TaskingFormPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\EXSUMFormPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\AMOListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\AwardsSheetListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\Form4610RListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\SchoolsRequestListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\Form2028ListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\TaskingListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\EXSUMListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\TransmittalSheetListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\TDYSheetListPresenter.cs" />
+    <Compile Include="Presenters\Controls\ListControls\EvaluationReportListPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\RoutingPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\FormSettingsPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\ErrorLogsPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\LookupSettingsPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\SystemPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\GroupsPresenter.cs" />
+    <Compile Include="Presenters\Pages\Administration\OrganizationsPresenter.cs" />
+    <Compile Include="Presenters\Pages\ActionsPresenter.cs" />
+    <Compile Include="Presenters\Pages\FileDownloadPresenter.cs" />
+    <Compile Include="Presenters\Pages\NewFormPresenter.cs" />
+    <Compile Include="Presenters\Pages\SearchPresenter.cs" />
+    <Compile Include="Presenters\Pages\FormListPresenter.cs" />
+    <Compile Include="Presenters\Pages\TrackingPresenter.cs" />
+    <Compile Include="Presenters\Pages\PreferencesPresenter.cs" />
+    <Compile Include="Presenters\Pages\DashboardPresenter.cs" />
+    <Compile Include="Presenters\Pages\FormEntryPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\AwardsSheetPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\TransmittalSheetPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\TDYSheetPresenter.cs" />
+    <Compile Include="Presenters\Controls\Forms\EvaluationReportPresenter.cs" />
+    <Compile Include="Presenters\BasePagePresenter.cs" />
+    <Compile Include="Presenters\SitePresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Controls\FormControls\FileControl\IFileControlView.cs" />
+    <Compile Include="Views\Controls\FormControls\IReviewerControlView.cs" />
+    <Compile Include="Views\Controls\Forms\IForm4610RSheetView.cs" />
+    <Compile Include="Views\Controls\Forms\ISchoolsRequestFormView.cs" />
+    <Compile Include="Views\Controls\Forms\IForm2028SheetView.cs" />
+    <Compile Include="Views\Controls\Forms\IAMOFormView.cs" />
+    <Compile Include="Views\Controls\Forms\IAwardsSheetView.cs" />
+    <Compile Include="Views\Controls\Forms\IEvaluationReportView.cs" />
+    <Compile Include="Views\Controls\Forms\ITaskingFormView.cs" />
+    <Compile Include="Views\Controls\Forms\ITDYSheetView.cs" />
+    <Compile Include="Views\Controls\Forms\IEXSUMFormView.cs" />
+    <Compile Include="Views\Controls\Forms\ITransmittalSheetView.cs" />
+    <Compile Include="Views\Controls\IFormListControlView.cs" />
+    <Compile Include="Views\Controls\IFormControlView.cs" />
+    <Compile Include="Views\Controls\ListControls\IAMOListView.cs" />
+    <Compile Include="Views\Controls\ListControls\IForm4610RListView.cs" />
+    <Compile Include="Views\Controls\ListControls\ISchoolsRequestListView.cs" />
+    <Compile Include="Views\Controls\ListControls\IForm2028ListView.cs" />
+    <Compile Include="Views\Controls\ListControls\ITaskingListView.cs" />
+    <Compile Include="Views\Controls\ListControls\IEXSUMListView.cs" />
+    <Compile Include="Views\Controls\ListControls\ITransmittalSheetListView.cs" />
+    <Compile Include="Views\Controls\ListControls\ITDYSheetListView.cs" />
+    <Compile Include="Views\Controls\ListControls\IEvaluationReportListView.cs" />
+    <Compile Include="Views\Controls\ListControls\IAwardsSheetListView.cs" />
+    <Compile Include="Views\IBasePageView.cs" />
+    <Compile Include="Views\ISiteView.cs" />
+    <Compile Include="Views\Pages\Administration\IRoutingView.cs" />
+    <Compile Include="Views\Pages\Administration\IFormSettingsView.cs" />
+    <Compile Include="Views\Pages\Administration\IErrorLogsView.cs" />
+    <Compile Include="Views\Pages\Administration\ILookupSettingsView.cs" />
+    <Compile Include="Views\Pages\Administration\ISystemView.cs" />
+    <Compile Include="Views\Pages\Administration\IGroupsView.cs" />
+    <Compile Include="Views\Pages\Administration\IOrganizationsView.cs" />
+    <Compile Include="Views\Pages\IActionsView.cs" />
+    <Compile Include="Views\Pages\IFileDownloadView.cs" />
+    <Compile Include="Views\Pages\INewFormView.cs" />
+    <Compile Include="Views\Pages\ISearchView.cs" />
+    <Compile Include="Views\Pages\IFormListView.cs" />
+    <Compile Include="Views\Pages\IPreferencesView.cs" />
+    <Compile Include="Views\Pages\IFormEntryView.cs" />
+    <Compile Include="Views\Pages\ITrackingView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\USAACE.eStaffing.Business\USAACE.eStaffing.Business.csproj">
+      <Project>{02f86e00-71de-4a7f-a0a1-965147e23917}</Project>
+      <Name>USAACE.eStaffing.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\USAACE.eStaffing.Domain\USAACE.eStaffing.Domain.csproj">
+      <Project>{ec00240d-3a37-40a7-890d-db211fdf885b}</Project>
+      <Name>USAACE.eStaffing.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\Pages\IDashboardView.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

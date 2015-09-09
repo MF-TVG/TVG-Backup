@@ -1,0 +1,120 @@
+﻿html
+{
+    background: none;
+}
+
+body
+{
+    margin: 0em;
+    padding: 0em;
+    color: #000000 !important;
+    min-width: 0em;
+    min-height: 0em;
+}
+
+tr
+{
+    page-break-inside: avoid;
+}
+
+.page
+{
+    position: inherit;
+}
+
+#header
+{
+    height: 1em;
+    position: fixed;
+}
+
+#content
+{
+    display: table;
+    position: relative;
+    table-layout: fixed;
+    top: 0em;
+    bottom: 0em;
+    margin: 0em;
+    padding: 2em 0em 2em 0em;
+    height: auto;
+}
+
+#headerBanner, #mainMenu
+{
+    display: none;
+}
+
+#currentPage
+{
+    border: none;
+    background-image: none;
+    margin-left: 0em;
+    padding: 2em;
+    overflow: hidden;
+}
+
+#footer
+{
+    height: 1em;
+    position: fixed;
+    bottom: 1em;
+}
+
+a.button, .ajax__html_editor_extender_buttoncontainer, input[type=image], a > img, .dateControlImage
+{
+    display: none;
+}
+
+.ajax__html_editor_extender_texteditor
+{
+    border: 0px !important;
+}
+
+.label
+{
+    font-weight: bold;
+}
+
+input, select, textarea
+{
+    border: 0px !important;
+}
+
+input[type=radio], input[type=radio] + label
+{
+    display: none;
+}
+
+input[type=radio][checked] + label
+{
+    display: inherit;
+}
+
+.showPrint
+{
+    display: inherit;
+}
+
+col.hidePrint, td.hidePrint, th.hidePrint
+{
+    width: 0em !important;
+    overflow: hidden;
+}
+
+div.hidePrint, a.hidePrint
+{
+    display: none !important;
+}
+
+.dashboardGrid
+{
+    max-height: 100%;
+    overflow-y: hidden;
+}
+
+.trackingGrid
+{
+    max-height: 100%;
+    overflow-y: hidden;
+}

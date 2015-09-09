@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC00240D-3A37-40A7-890D-DB211FDF885B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>USAACE.eStaffing.Domain</RootNamespace>
+    <AssemblyName>USAACE.eStaffing.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Dev\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\Test\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="USAACE.Common">
+      <HintPath>..\..\Architecture.NET\Libraries\Common\4.5.1\USAACE.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ErrorLog.cs" />
+    <Compile Include="Entities\Form.cs" />
+    <Compile Include="Entities\FormActionType.cs" />
+    <Compile Include="Entities\FormAttachment.cs" />
+    <Compile Include="Entities\FormAttachmentData.cs" />
+    <Compile Include="Entities\FormData.cs" />
+    <Compile Include="Entities\FormLog.cs" />
+    <Compile Include="Entities\FormStatus.cs" />
+    <Compile Include="Entities\FormType.cs" />
+    <Compile Include="Entities\FormTypeLookup.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\GroupUser.cs" />
+    <Compile Include="Entities\Organization.cs" />
+    <Compile Include="Entities\OrganizationFormActor.cs" />
+    <Compile Include="Entities\OrganizationFormDefault.cs" />
+    <Compile Include="Entities\OrganizationFormReviewer.cs" />
+    <Compile Include="Entities\OrganizationFormRouting.cs" />
+    <Compile Include="Entities\OrganizationFormType.cs" />
+    <Compile Include="Entities\OrganizationForwarding.cs" />
+    <Compile Include="Entities\OrganizationGroup.cs" />
+    <Compile Include="Entities\ReviewAction.cs" />
+    <Compile Include="Entities\ReviewRole.cs" />
+    <Compile Include="Entities\ReviewSignature.cs" />
+    <Compile Include="Entities\ReviewStatus.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="EntityExtensions\EntityExtensions.cs" />
+    <Compile Include="FormEntities\Form4610R.cs" />
+    <Compile Include="FormEntities\SchoolsRequest.cs" />
+    <Compile Include="FormEntities\Form2028.cs" />
+    <Compile Include="FormEntities\Tasking.cs" />
+    <Compile Include="FormEntities\AMOForm.cs" />
+    <Compile Include="FormEntities\TDYSheet.cs" />
+    <Compile Include="FormEntities\FormSubEntityBase.cs" />
+    <Compile Include="FormEntities\Transmittal.cs" />
+    <Compile Include="FormEntities\EXSUM.cs" />
+    <Compile Include="FormEntities\AwardSheet.cs" />
+    <Compile Include="FormEntities\EvaluationReport.cs" />
+    <Compile Include="FormEntities\FormEntityBase.cs" />
+    <Compile Include="LookupEntities\SchoolsChecklistItem.cs" />
+    <Compile Include="LookupEntities\SchoolsRequestType.cs" />
+    <Compile Include="LookupEntities\Form2028CourseType.cs" />
+    <Compile Include="LookupEntities\Form2028Course.cs" />
+    <Compile Include="LookupEntities\TaskingLocation.cs" />
+    <Compile Include="LookupEntities\TaskingSecurityLevel.cs" />
+    <Compile Include="LookupEntities\TaskingActionType.cs" />
+    <Compile Include="LookupEntities\TaskingDocumentType.cs" />
+    <Compile Include="LookupEntities\TaskingSource.cs" />
+    <Compile Include="LookupEntities\TaskingType.cs" />
+    <Compile Include="LookupEntities\TravelMode.cs" />
+    <Compile Include="LookupEntities\AwardReason.cs" />
+    <Compile Include="LookupEntities\AwardLevel.cs" />
+    <Compile Include="LookupEntities\LookupEntityBase.cs" />
+    <Compile Include="LookupEntities\LookupEntityList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

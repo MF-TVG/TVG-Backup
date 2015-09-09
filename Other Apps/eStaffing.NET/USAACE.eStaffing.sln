@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.Web", "USAACE.eStaffing.Web\USAACE.eStaffing.Web.csproj", "{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.Presentation", "USAACE.eStaffing.Presentation\USAACE.eStaffing.Presentation.csproj", "{811207C3-8DE2-449A-A78E-849628C1AEC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.Business", "USAACE.eStaffing.Business\USAACE.eStaffing.Business.csproj", "{02F86E00-71DE-4A7F-A0A1-965147E23917}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.Domain", "USAACE.eStaffing.Domain\USAACE.eStaffing.Domain.csproj", "{EC00240D-3A37-40A7-890D-DB211FDF885B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.WebDAV", "USAACE.eStaffing.WebDAV\USAACE.eStaffing.WebDAV.csproj", "{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USAACE.eStaffing.Web.ActiveX", "USAACE.eStaffing.Web.ActiveX\USAACE.eStaffing.Web.ActiveX.csproj", "{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "USAACE.eStaffing.Web.ActiveX.Installer", "USAACE.eStaffing.Web.ActiveX.Installer\USAACE.eStaffing.Web.ActiveX.Installer.vdproj", "{90B5F4BE-A8DD-446B-BF3D-E6840D2A053B}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://rucka0011spsdt1:8080/tfs/usaace
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = USAACE.eStaffing.Business\\USAACE.eStaffing.Business.csproj
+		SccProjectName1 = USAACE.eStaffing.Business
+		SccLocalPath1 = USAACE.eStaffing.Business
+		SccProjectUniqueName2 = USAACE.eStaffing.Domain\\USAACE.eStaffing.Domain.csproj
+		SccProjectName2 = USAACE.eStaffing.Domain
+		SccLocalPath2 = USAACE.eStaffing.Domain
+		SccProjectUniqueName3 = USAACE.eStaffing.Presentation\\USAACE.eStaffing.Presentation.csproj
+		SccProjectName3 = USAACE.eStaffing.Presentation
+		SccLocalPath3 = USAACE.eStaffing.Presentation
+		SccProjectUniqueName4 = USAACE.eStaffing.Web\\USAACE.eStaffing.Web.csproj
+		SccProjectName4 = USAACE.eStaffing.Web
+		SccLocalPath4 = USAACE.eStaffing.Web
+		SccProjectUniqueName5 = USAACE.eStaffing.WebDAV\\USAACE.eStaffing.WebDAV.csproj
+		SccProjectName5 = USAACE.eStaffing.WebDAV
+		SccLocalPath5 = USAACE.eStaffing.WebDAV
+		SccProjectUniqueName6 = USAACE.eStaffing.Web.ActiveX\\USAACE.eStaffing.Web.ActiveX.csproj
+		SccProjectName6 = USAACE.eStaffing.Web.ActiveX
+		SccLocalPath6 = USAACE.eStaffing.Web.ActiveX
+		SccProjectUniqueName7 = USAACE.eStaffing.Web.ActiveX.Installer\\USAACE.eStaffing.Web.ActiveX.Installer.vdproj
+		SccProjectName7 = USAACE.eStaffing.Web.ActiveX.Installer
+		SccLocalPath7 = USAACE.eStaffing.Web.ActiveX.Installer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Dev|Any CPU = Dev|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Test|Any CPU = Test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{8FBE78A7-D4B3-4EAF-A102-5D1867ECE6F2}.Test|Any CPU.Build.0 = Test|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Release|Any CPU.ActiveCfg = Test|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Release|Any CPU.Build.0 = Test|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{811207C3-8DE2-449A-A78E-849628C1AEC1}.Test|Any CPU.Build.0 = Test|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Release|Any CPU.ActiveCfg = Test|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Release|Any CPU.Build.0 = Test|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{02F86E00-71DE-4A7F-A0A1-965147E23917}.Test|Any CPU.Build.0 = Test|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Release|Any CPU.ActiveCfg = Test|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Release|Any CPU.Build.0 = Test|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{EC00240D-3A37-40A7-890D-DB211FDF885B}.Test|Any CPU.Build.0 = Test|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Dev|Any CPU.ActiveCfg = Dev|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Dev|Any CPU.Build.0 = Dev|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Release|Any CPU.ActiveCfg = Test|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Release|Any CPU.Build.0 = Test|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Test|Any CPU.ActiveCfg = Test|Any CPU
+		{34D83D68-DFD5-4A2A-A62D-DCD3E0197C48}.Test|Any CPU.Build.0 = Test|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Dev|Any CPU.Build.0 = Debug|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0FC2BF-A15C-49F8-9845-A9574A828E9D}.Test|Any CPU.Build.0 = Release|Any CPU
+		{90B5F4BE-A8DD-446B-BF3D-E6840D2A053B}.Debug|Any CPU.ActiveCfg = Debug
+		{90B5F4BE-A8DD-446B-BF3D-E6840D2A053B}.Dev|Any CPU.ActiveCfg = Debug
+		{90B5F4BE-A8DD-446B-BF3D-E6840D2A053B}.Release|Any CPU.ActiveCfg = Release
+		{90B5F4BE-A8DD-446B-BF3D-E6840D2A053B}.Test|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
