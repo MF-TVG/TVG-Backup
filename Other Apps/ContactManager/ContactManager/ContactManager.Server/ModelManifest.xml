@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\Properties\Service.lsml" Checksum="679C78F29C5AF23E9956A773B0E46DF90F7B86CADA0B79571E5896A1C79F5B70" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\Properties\DataSources\ApplicationData.lsml" Checksum="E6FEEAC3B4A850AAC5F0029259A0B9F8C1BD45F2950D17BD8D6664B9422E6AD6" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\Contacts.lsml" Checksum="3D6F7BD0ADC6E84A0DC39BD593F1535B8960AC7693C949FCF539F566653F2848" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\EmailAddresses.lsml" Checksum="225683FF28204879167D5EF053C76BBD688E8346A63A7722EC496F98F4186F3C" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\PhoneNumbers.lsml" Checksum="9921601EA4C8BEF87BA344EB9F778F18353B31C59E5FA047F2982BE8E7843269" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\Addresses.lsml" Checksum="C65B0AA406C78C16316A0CC7EAD7F995C47159279B532BD0A984F193EF73CCC1" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\SortedContacts.lsml" Checksum="84FBCE3C1DBCDD41E16FC844922170B945503A794B1334F3C8B26B1A7E9A2F30" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\ContactsByBirthDate.lsml" Checksum="076427AB085AEA0BAC3E24D199121A76E9434900A8C7F4B9D7A74450013EE208" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.Server\DataSources\ApplicationData\ContactsByPhone.lsml" Checksum="28C8E923CB52A03322320E723ABB929C2DDA2FB39AC3919B5EDA59654BB68A84" />
+  </Documents>
+</ModelDocumentManifest>

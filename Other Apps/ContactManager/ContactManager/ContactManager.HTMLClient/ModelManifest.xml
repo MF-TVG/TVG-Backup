@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Properties\Client.lsml" Checksum="0037385748A67998AD580AD64E941B4B1CA4634F681D7DFDC990D5FFF8CBD6C9" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Properties\Proxies.lsml" Checksum="82F42538ECD8504ED5FCAE4EC53E69702D85D1895AA662340E261B2B79FE7648" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\BrowseContacts.lsml" Checksum="20BA8E7430C63C4F1CC368887421B4B32B8EDEAC9F24569A97407D7CF93A09E4" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\AddEditContact.lsml" Checksum="9E0F7B9B3394C71177318195B750C39D122F9B055F3798B2578E7F719461C40A" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\ViewContact.lsml" Checksum="E239B11E261FC048F3EC402B543A33C7DA8EE9CA92EEBD4977A2E9801D50ECA6" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Properties\ApplicationData\Contacts.lsml" Checksum="4BF839B86C9B843A1C5C4B3FB6BBED490110AAFBF7FDDD4E5E113F0651BADFDC" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\AddEditEmailAddress.lsml" Checksum="B5BF76F882FCB416876DF19DAA414DFA9E0251CEC56637AF30F03E2F19B17F9A" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\AddEditPhoneNumber.lsml" Checksum="8998A8553CEA9081146FE27268CDA5C937A0341F765C2766C4D6F83BB9994ED4" />
+    <Document FullPath="C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\Screens\AddEditAddress.lsml" Checksum="FA0464C0D553E3EAAD30CDD22BB1681C8073D2BA8152A2A6234245D3389A1278" />
+  </Documents>
+</ModelDocumentManifest>

@@ -1,0 +1,2 @@
+C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\bin\Debug\LSResourceGeneratorsTask.mcs
+C:\Development\ContactManager\ContactManager\ContactManager.HTMLClient\bin\Debug\LSClientCodeGeneratorsTask.mcs
